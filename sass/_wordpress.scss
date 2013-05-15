@@ -1,0 +1,441 @@
+
+/* =Global
+----------------------------------------------- */
+.entry-content, .comment-content, .widget-area {
+	ul {
+		margin-left: 1.5em;
+	}
+	ol {
+		margin-left: 2em;
+	}
+}
+
+.label a {
+	color: $label-font-color-alt;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	&:hover, &:active, &:focus {
+		background-color: #f1f1f1;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		color: #21759b;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar */
+	}
+}
+
+/* =Layout
+----------------------------------------------- */
+body {
+	padding: 1.5em 0;
+}
+
+.site {
+	@include grid-row;
+	background-color: $body-bg;
+}
+
+.site-header {
+	@include grid-row;
+	.site-branding {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-12;
+	}
+	.site-navigation {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-12;
+	}
+}
+
+.site-main {
+	@include grid-row;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	.content-area {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-9;
+		body.error404 & {
+			@extend .columns;
+			@extend .small-12;
+			@extend .large-12;
+		}
+	}
+	.widget-area {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-3;
+	}
+}
+.site-footer {
+	@include grid-row;
+	padding: 1.5em 0;
+	border-top: $hr-border-width $hr-border-style $hr-border-color;
+	.site-info {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-12;
+	}
+}
+
+/* =masthead
+----------------------------------------------- */
+.site-title {
+	margin-top: 0;
+}
+.site-description {
+	margin-top: 0
+}
+
+/* =Menu
+----------------------------------------------- */
+.top-bar-section ul li a {
+	height: 45px;
+}
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+	@include panel;
+}
+
+.hentry {
+	margin: 0 0 1em;
+	padding-bottom: 1.5em;
+	border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+}
+.byline {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	margin: 1em 0 0;
+	@include clearfix;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-footer {
+	clear: both;
+	@include panel;
+	margin-bottom: 0;
+}
+
+/* =error404widgets
+----------------------------------------------- */
+.error404widgets {
+	@include grid-row;
+	.widget {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-3;
+		h2 {
+			font-size: $h5-font-size;
+		}
+	}
+}
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	@extend .th;
+	@extend .radius;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+/*
+	border: 1px solid #ccc;
+*/
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	color: lighten($body-font-color, 40%);
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+	color: lighten($body-font-color, 40%);
+}
+.gallery-item {
+	text-align: center;
+}
+.gallery-item a img {
+	@extend .th;
+	@extend .radius;
+	max-width: 90%;
+	height: auto;
+}
+.gallery-box li {
+	margin-right: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content [class*="navigation"] {
+	margin: 0 0 1.5em;
+	@include clearfix;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* =searchform
+----------------------------------------------- */
+.searchform {
+	@extend .row;
+	@extend .collapse;
+}
+.fieldbox {
+	@extend .columns;
+	@extend .small-10;
+}
+.submitbox {
+	@extend .columns;
+	@extend .small-2;
+	.submit {
+		@extend .button;
+		@extend .prefix;
+	}
+}
+
+/* =Comments
+----------------------------------------------- */
+.comments-title {
+	font-size: $h5-font-size;
+}
+
+.comment-list {
+	font-size: 0.8em;
+	list-style-type: none;
+	margin-left: 0 !important;
+
+	.comment,
+	.pingback {
+		@include grid-row;
+	}
+	.pingback > p {
+		@extend .columns;
+		@extend .small-12;
+		@extend .large-12;
+		margin-bottom: 0;
+	}
+	.comment-article {
+		@include grid-row;
+		.comment-footer {
+			@extend .columns;
+			@extend .small-12;
+			@extend .large-3;
+		}
+		.comment-content {
+			@extend .columns;
+			@extend .small-12;
+			@extend .large-9;
+		}
+	}
+	li {
+		.children {
+			list-style-type: none;
+			margin-top: 1em;
+			@include grid-column($columns:9,$offset:3);
+			.children {
+				@include grid-column($columns:11,$offset:1);
+			}
+		}
+	}
+
+	.depth-1 {
+		padding: 1em 0;
+		border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+	}
+	> .thread-odd {
+		background-color: #eeeeee;
+	}
+	.vcard {
+		display: block;
+		background-color: #FFFFFF;
+		img {
+			margin-right: 5px;
+		}
+	}
+}
+@media only screen and (orientation: portrait) {
+	.comment-list {
+		li {
+			.children {
+				@include grid-column($columns:11,$offset:1);
+			}
+		}
+	
+	}
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	> .comment-article .vcard {
+		background-color: #ffffcc;
+	}
+}
+
+/* =Comments form
+----------------------------------------------- */
+#reply-title {
+	font-size: $h5-font-size;
+}
+.required {
+	color: red;
+	font-weight: bold;
+}
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-comment {
+	@extend .row;
+	@extend .collapse;
+	label {
+		@include prefix-postfix-base;
+		@include prefix;
+		@include grid-column($columns:3,$float:left);
+		text-align: left;
+	}
+	input, textarea {
+		@include grid-column($columns:9);
+	}
+	textarea {
+		height: 10em;
+	}
+}
+.form-submit {
+	input[type="submit"] {
+		@extend .button;
+	}
+}
+@media only screen and (orientation: portrait) {
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url,
+	.comment-form-comment {
+		label {
+			font-size: 0.8em;
+			@include grid-column($columns:5,$float:left);
+		}
+		input, textarea {
+			@include grid-column($columns:7);
+		}
+	}
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+.widget-title {
+	font-size: $h5-font-size;
+}
+/* Search widget */
+.widget_search .submit {
+	display: none;
+}
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
