@@ -8032,12 +8032,16 @@ a.th, a.wp-caption {
   max-width: 800px;
 }
 
+/* =Global
+----------------------------------------------- */
 html {
   background-color: transparent;
 }
 
-/* =Global
------------------------------------------------ */
+body {
+  position: inherit;
+}
+
 .entry-content ul, .comment-content ul, .widget-area ul {
   margin-left: 1.5em;
 }

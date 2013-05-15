@@ -3,6 +3,9 @@
 html {
 	background-color: transparent;
 }
+body {
+	position: inherit;
+}
 
 .entry-content, .comment-content, .widget-area {
 	ul {
