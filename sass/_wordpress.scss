@@ -1,6 +1,9 @@
-
 /* =Global
 ----------------------------------------------- */
+html {
+	background-color: transparent;
+}
+
 .entry-content, .comment-content, .widget-area {
 	ul {
 		margin-left: 1.5em;
@@ -58,12 +61,9 @@
 
 /* =Layout
 ----------------------------------------------- */
-body {
-	padding: 1.5em 0;
-}
-
 .site {
-	@include grid-row;
+	margin: 2em auto;
+	max-width: 1100px;
 	background-color: $body-bg;
 }
 
