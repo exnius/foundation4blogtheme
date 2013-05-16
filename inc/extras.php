@@ -170,9 +170,9 @@ function foundation4blogtheme_page_menu( $args = array() ) {
  * gallery shortcode overwrite.
  http://notnil-creative.com/blog/archives/969
  */
-add_filter('post_gallery', 'my_gallery_shortcode', 10, 2);
+add_filter('post_gallery', 'foudation4blogtheme_gallery_shortcode', 10, 2);
 /* redesign gallery style. originally in wp-includes/media.php */
-function my_gallery_shortcode($output, $attr) {
+function foudation4blogtheme_gallery_shortcode($output, $attr) {
 	$post = get_post();
 
 	static $instance = 0;
@@ -253,6 +253,7 @@ function my_gallery_shortcode($output, $attr) {
 		$caption = trim($attachment->post_excerpt) ? wptexturize($attachment->post_excerpt) : '';
 		$default_attr = array(
 			'data-caption' => $caption,
+			'class'	=> "th radius attachment-$size",
 		);
 		$attachmentimg = wp_get_attachment_image($id, $size, false, $default_attr);
 
@@ -273,4 +274,27 @@ function my_gallery_shortcode($output, $attr) {
 	$output .= "</ul></div>\n";
 
 	return $output;
+}
+
+/**
+ * caoption shortcode overwrite.
+ */
+add_filter('img_caption_shortcode', 'foudation4blogtheme_img_caption_shortcode', 10, 3);
+/* redesign gallery style. originally in wp-includes/media.php */
+function foudation4blogtheme_img_caption_shortcode( $val, $attr, $content = null ) {
+
+	extract(shortcode_atts(array(
+		'id'	=> '',
+		'align'	=> 'alignnone',
+		'width'	=> '',
+		'caption' => ''
+	), $attr));
+
+	if ( 1 > (int) $width || empty($caption) )
+		return $content;
+
+	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+
+	return '<div ' . $id . 'class="wp-caption th radius ' . esc_attr($align) . '" style="width: ' . (10 + (int) $width) . 'px">'
+	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }

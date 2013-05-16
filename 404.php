@@ -20,33 +20,42 @@ get_header(); ?>
 
 					<?php get_search_form(); ?>
 
-					<div class="error404widgets">
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+					<div class="error404widgets row">
 
-					<?php if ( foundation4blogtheme_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'foundation4blogtheme' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+						<div class="columns small-12 large-3">
+							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+						</div>
 
-					<?php
-					/* translators: %1$s: smiley */
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'foundation4blogtheme' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
+						<div class="columns small-12 large-3">
+							<?php if ( foundation4blogtheme_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<div class="widget widget_categories">
+								<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'foundation4blogtheme' ); ?></h2>
+								<ul>
+								<?php
+									wp_list_categories( array(
+										'orderby'    => 'count',
+										'order'      => 'DESC',
+										'show_count' => 1,
+										'title_li'   => '',
+										'number'     => 10,
+									) );
+								?>
+								</ul>
+							</div><!-- .widget -->
+							<?php endif; ?>
+						</div>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+						<div class="columns small-12 large-3">
+							<?php
+							/* translators: %1$s: smiley */
+							$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'foundation4blogtheme' ), convert_smilies( ':)' ) ) . '</p>';
+							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+							?>
+						</div>
+
+						<div class="columns small-12 large-3">
+							<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+						</div>
 					</div>
 
 				</div><!-- .entry-content -->

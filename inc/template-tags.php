@@ -74,8 +74,8 @@ function foundation4blogtheme_comment( $comment, $args, $depth ) {
 		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment-article">
-			<footer class="comment-footer">
+		<article id="comment-<?php comment_ID(); ?>" class="comment-article row">
+			<footer class="comment-footer columns small-12 large-3">
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
 					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
@@ -89,7 +89,7 @@ function foundation4blogtheme_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-meta .commentmetadata -->
 			</footer><!-- .comment-footer -->
 
-			<div class="comment-content">
+			<div class="comment-content columns small-12 large-9">
 				<div class="comment-text">
 					<?php if ( $comment->comment_approved == '0' ) : ?>
 						<em><?php _e( 'Your comment is awaiting moderation.', 'foundation4blogtheme' ); ?></em>

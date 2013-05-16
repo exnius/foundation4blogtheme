@@ -128,14 +128,16 @@ add_action( 'widgets_init', 'foundation4blogtheme_widgets_init' );
 function foundation4blogtheme_scripts() {
 	if ( ! is_admin() ) {
 		global $wp_styles;
-		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array(), '20130514' );
-		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.css', array( 'foundation4blogtheme-style' ), '20130514' );
-		$wp_styles->add_data( 'ie8-grid-foundation-4', 'conditional', 'lt IE 9' );
+
+		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array( 'foundation4-app' ), '20130514' );
 	
-		wp_enqueue_script( 'jquery' );
-		// foundation4
-		wp_enqueue_script( 'custom.modernizr', get_template_directory_uri() . '/javascripts/vendor/custom.modernizr.js', array(), 'Foundation4', true );
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation/foundation.js', array(), 'Foundation4', true );
+		// Foundation4
+		wp_enqueue_style( 'foundation4-app', get_template_directory_uri() . '/app.css', array(), 'Foundation4' );
+		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.css', array( 'foundation4-app' ), 'Foundation4' );
+		$wp_styles->add_data( 'ie8-grid-foundation-4', 'conditional', 'lt IE 9' );
+
+		wp_enqueue_script( 'custom.modernizr', get_template_directory_uri() . '/javascripts/vendor/custom.modernizr.js', array('jquery'), 'Foundation4', true );
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation/foundation.js', array('jquery'), 'Foundation4', true );
 		// foundation4 alert
 		// wp_enqueue_script( 'foundation.alerts', get_template_directory_uri() . '/javascripts/foundation/foundation.alerts.js', array( 'foundation' ), 'Foundation4', true );
 		// foundation4 clearing
@@ -171,7 +173,7 @@ function foundation4blogtheme_scripts() {
 		}
 	
 		if ( is_singular() && wp_attachment_is_image() ) {
-			wp_enqueue_script( 'foundation4blogtheme-keyboard-image-navigation', get_template_directory_uri() . '/javascripts/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+			wp_enqueue_script( 'foundation4blogtheme-keyboard-image-navigation', get_template_directory_uri() . '/javascripts/keyboard-image-navigation.js', array( 'jquery' ), '20130115' );
 		}
 	}
 }

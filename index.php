@@ -31,7 +31,16 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php foundation4blogtheme_content_nav( 'nav-below' ); ?>
+			<?php if ( $wp_query->max_num_pages > 1 ) : ?>
+				<?php // Pagination by WP SiteManager. http://www.wp-sitemanager.com/usage/pagenavi/ ?>
+				<?php if ( class_exists( 'WP_SiteManager_page_navi' ) ) : ?>
+					<div class="pagination-centered">
+						<?php WP_SiteManager_page_navi::page_navi('elm_class=pagination&current_format=<a href="#">%d</a>'); ?>
+					</div>
+				<?php else : ?>
+					<?php foundation4blogtheme_content_nav( 'nav-below' ); ?>
+				<?php endif; ?>
+			<?php endif; ?>
 
 		<?php else : ?>
 

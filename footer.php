@@ -10,8 +10,8 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+	<footer id="colophon" class="site-footer row" role="contentinfo">
+		<div class="site-info columns small-12">
 			<?php do_action( 'foundation4blogtheme_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'foundation4blogtheme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'foundation4blogtheme' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

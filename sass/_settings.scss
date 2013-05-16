@@ -25,8 +25,8 @@ $em-base: 16px !default;
 
 // $default-float: left;
 
-// $body-bg: #fff;
-// $body-font-color: #222;
+$body-bg: #fff;
+$body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -207,9 +207,8 @@ $em-base: 16px !default;
 
 // Padding and margin
 
-$microformat-padding: emCalc(2px) emCalc(5px);
+// $microformat-padding: emCalc(10px) emCalc(12px);
 // $microformat-margin: 0 0 emCalc(20px) 0;
-$microformat-margin: 0;
 
 // Border styles
 
@@ -1205,6 +1204,3 @@ $label-font-color-alt: #fff;
 // $topbar-transition-speed: 300ms;
 // $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width: "#{$topbar-breakpoint}")";
-
-/* Divider Styles */
-$topbar-sticky-class: ".sticky-top-bar";

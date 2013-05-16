@@ -1,3 +1,14 @@
+/* mixin */
+$border-style: solid;
+$border-width: 1px;
+$border-color: #ccc;
+
+@mixin roundbox($padding: 15px) {
+	border: $border-style $border-width $border-color;
+	padding: $padding;
+	@include border-radius;
+}
+
 /* =Global
 ----------------------------------------------- */
 html {
@@ -66,81 +77,47 @@ body {
 ----------------------------------------------- */
 .site {
 	margin: 2em auto;
-	max-width: 1100px;
+	padding: 1em 1.5em;
+	max-width: 1000px;
 	background-color: $body-bg;
 }
 
-.site-header {
-	@include grid-row;
-	.site-branding {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-12;
-	}
-	.site-navigation {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-12;
-	}
-}
-
 .site-main {
-	@include grid-row;
+	clear: both;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	.content-area {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-9;
-		body.error404 & {
-			@extend .columns;
-			@extend .small-12;
-			@extend .large-12;
-		}
-	}
-	.widget-area {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-3;
-	}
 }
 .site-footer {
-	@include grid-row;
+	clear: both;
 	padding: 1.5em 0;
-	border-top: $hr-border-width $hr-border-style $hr-border-color;
-	.site-info {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-12;
-	}
+	border-top: $border-style $border-width $border-color;
 }
 
 /* =masthead
 ----------------------------------------------- */
 .site-title {
 	margin-top: 0;
+	margin-bottom: 10px;
 }
 .site-description {
-	margin-top: 0
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 /* =Menu
 ----------------------------------------------- */
-.top-bar-section ul li a {
-	height: 45px;
-}
 
 /* =Content
 ----------------------------------------------- */
 
 .sticky {
-	@include panel;
+	@include roundbox;
 }
 
 .hentry {
 	margin: 0 0 1em;
 	padding-bottom: 1.5em;
-	border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+	border-bottom: $border-style $border-width $border-color;
 }
 .byline {
 	display: none;
@@ -152,7 +129,7 @@ body {
 .entry-content,
 .entry-summary {
 	margin: 1em 0 0;
-	@include clearfix;
+	@include pie-clearfix;
 }
 .page-links {
 	clear: both;
@@ -161,22 +138,8 @@ body {
 
 .entry-footer {
 	clear: both;
-	@include panel;
-	margin-bottom: 0;
-}
-
-/* =error404widgets
------------------------------------------------ */
-.error404widgets {
-	@include grid-row;
-	.widget {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-3;
-		h2 {
-			font-size: $h5-font-size;
-		}
-	}
+	@include roundbox;
+	background-color: #eeeeee;
 }
 
 /* =Asides
@@ -199,38 +162,32 @@ body {
 	padding: 0;
 }
 .wp-caption {
-	@extend .th;
-	@extend .radius;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	max-width: 100%;
-/*
-	border: 1px solid #ccc;
-*/
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin: 1.2% auto 0;
+	margin: 5px auto;
 	max-width: 98%;
 }
 .wp-caption-text {
-	color: lighten($body-font-color, 40%);
+	font-size: 0.9em;
+	color: lighten($body-font-color, 50%);
 	text-align: center;
+	margin: 0.5em 0;
 }
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
+
 .site-content .gallery {
 	margin-bottom: 1.5em;
 }
 .gallery-caption {
-	color: lighten($body-font-color, 40%);
+	color: lighten($body-font-color, 50%);
 }
 .gallery-item {
 	text-align: center;
 }
 .gallery-item a img {
-	@extend .th;
-	@extend .radius;
 	max-width: 90%;
 	height: auto;
 }
@@ -238,20 +195,12 @@ body {
 	margin-right: 0;
 }
 
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
-
-
 /* =Navigation
 ----------------------------------------------- */
 
 .site-content [class*="navigation"] {
 	margin: 0 0 1.5em;
-	@include clearfix;
+	@include pie-clearfix;
 }
 [class*="navigation"] .nav-previous {
 	float: left;
@@ -263,29 +212,11 @@ object {
 	width: 50%;
 }
 
-/* =searchform
------------------------------------------------ */
-.searchform {
-	@extend .row;
-	@extend .collapse;
-}
-.fieldbox {
-	@extend .columns;
-	@extend .small-10;
-}
-.submitbox {
-	@extend .columns;
-	@extend .small-2;
-	.submit {
-		@extend .button;
-		@extend .prefix;
-	}
-}
 
 /* =Comments
 ----------------------------------------------- */
 .comments-title {
-	font-size: $h5-font-size;
+	font-size: 1.4em;
 }
 
 .comment-list {
@@ -293,43 +224,21 @@ object {
 	list-style-type: none;
 	margin-left: 0 !important;
 
-	.comment,
-	.pingback {
-		@include grid-row;
-	}
 	.pingback > p {
-		@extend .columns;
-		@extend .small-12;
-		@extend .large-12;
 		margin-bottom: 0;
 	}
-	.comment-article {
-		@include grid-row;
-		.comment-footer {
-			@extend .columns;
-			@extend .small-12;
-			@extend .large-3;
-		}
-		.comment-content {
-			@extend .columns;
-			@extend .small-12;
-			@extend .large-9;
-		}
-	}
-	li {
+	.children {
+		list-style-type: none;
+		margin-top: 1em;
+		margin-left: 180px;
 		.children {
-			list-style-type: none;
-			margin-top: 1em;
-			@include grid-column($columns:9,$offset:3);
-			.children {
-				@include grid-column($columns:11,$offset:1);
-			}
+			margin-left: 3em;
 		}
 	}
 
 	.depth-1 {
 		padding: 1em 0;
-		border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+		border-bottom: $border-style $border-width $border-color;
 	}
 	> .thread-odd {
 		background-color: #eeeeee;
@@ -344,12 +253,9 @@ object {
 }
 @media only screen and (orientation: portrait) {
 	.comment-list {
-		li {
-			.children {
-				@include grid-column($columns:11,$offset:1);
-			}
+		.children {
+			margin-left: 2em;
 		}
-	
 	}
 }
 
@@ -365,49 +271,11 @@ object {
 /* =Comments form
 ----------------------------------------------- */
 #reply-title {
-	font-size: $h5-font-size;
+	font-size: 1.4em;
 }
 .required {
 	color: red;
 	font-weight: bold;
-}
-.comment-form-author,
-.comment-form-email,
-.comment-form-url,
-.comment-form-comment {
-	@extend .row;
-	@extend .collapse;
-	label {
-		@include prefix-postfix-base;
-		@include prefix;
-		@include grid-column($columns:3,$float:left);
-		text-align: left;
-	}
-	input, textarea {
-		@include grid-column($columns:9);
-	}
-	textarea {
-		height: 10em;
-	}
-}
-.form-submit {
-	input[type="submit"] {
-		@extend .button;
-	}
-}
-@media only screen and (orientation: portrait) {
-	.comment-form-author,
-	.comment-form-email,
-	.comment-form-url,
-	.comment-form-comment {
-		label {
-			font-size: 0.8em;
-			@include grid-column($columns:5,$float:left);
-		}
-		input, textarea {
-			@include grid-column($columns:7);
-		}
-	}
 }
 
 /* =Widgets
@@ -421,8 +289,9 @@ object {
 .widget select {
 	max-width: 100%;
 }
-.widget-title {
-	font-size: $h5-font-size;
+.widget-title,
+.widgettitle {
+	font-size: 1.4em;
 }
 /* Search widget */
 .widget_search .submit {
