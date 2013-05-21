@@ -79,7 +79,7 @@ class foundation4blogtheme_walker_nav_menu extends Walker_Nav_Menu {
 		if ( !empty( $children_elements[ $element->$id_field ] ) ) {
 			$element->classes[] = 'has-dropdown';
 		}
-		$element->classes[] = ($element->current || $element->current_item_ancestor) ? 'active' : '';
+		$element->classes[] = ($element->current || $element->current_item_ancestor || in_array("current-page-ancestor", $element->classes)) ? 'active' : '';
 		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 	}
 } // end foundation4blogtheme_walker_nav_menu class
