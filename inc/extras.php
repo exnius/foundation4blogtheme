@@ -209,20 +209,6 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 	static $instance = 0;
 	$instance++;
 
-	if ( ! empty( $attr['ids'] ) ) {
-		// 'ids' is explicitly ordered, unless you specify otherwise.
-		if ( empty( $attr['orderby'] ) )
-			$attr['orderby'] = 'post__in';
-		$attr['include'] = $attr['ids'];
-	}
-
-	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
-	if ( isset( $attr['orderby'] ) ) {
-		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( !$attr['orderby'] )
-			unset( $attr['orderby'] );
-	}
-
 	extract(shortcode_atts(array(
 		'order'      => 'ASC',
 		'orderby'    => 'menu_order ID',
@@ -273,10 +259,9 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 	$selector = "gallery-{$instance}";
 
 	$gallery_style = $gallery_div = '';
-	if ( apply_filters( 'use_default_gallery_style', true ) )
-		$gallery_style = "<!-- no style in default gallery. -->";
+
 	$size_class = sanitize_html_class( $size );
-	$gallery_div = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'><ul class='gallery-box small-block-grid-{$columns} clearing-thumbs' data-clearing>\n";
+	$gallery_div = "<div id='{$selector}' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'><ul class='gallery-box small-block-grid-{$columns} clearing-thumbs' data-clearing>\n";
 	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
 
 	$i = 0;
