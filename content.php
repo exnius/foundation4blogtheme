@@ -9,9 +9,33 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
+
+		<div id="postedon" class="entry-meta">
 			<?php foundation4blogtheme_posted_on(); ?>
+			<?php if ( comments_open() ) : ?>
+				<span class="sep"> | </span>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'foundation4blogtheme' ) . '</span>', __( '1 Comment', 'foundation4blogtheme' ), __( '% Comments', 'foundation4blogtheme' ) ); ?>
+			<?php endif; // comments_open() ?>
+			<?php edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		</div><!-- #postedon.entry-meta -->
+
+		<div id="postedin" class="entry-meta">
+			<?php _e( 'Categories: ', 'foundation4blogtheme' ); the_category(', '); ?>
+			<?php
+				$tag_list = get_the_tag_list( '', __( ', ', 'foundation4blogtheme' ) );
+				if ( '' != $tag_list ) {
+					echo '<span class="sep"> | </span>';
+					echo __( 'Tags: ', 'foundation4blogtheme' ) . $tag_list;
+				}
+			?>
+		</div><!-- #postedin.entry-meta -->
+
+		<?php else : ?>
+
+		<div class="entry-meta">
+			<?php edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
@@ -31,35 +55,4 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<footer class="entry-meta entry-footer">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'foundation4blogtheme' ) );
-				if ( $categories_list && foundation4blogtheme_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'foundation4blogtheme' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
-
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'foundation4blogtheme' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="sep"> | </span>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'foundation4blogtheme' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
-
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="sep"> | </span>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'foundation4blogtheme' ), __( '1 Comment', 'foundation4blogtheme' ), __( '% Comments', 'foundation4blogtheme' ) ); ?></span>
-		<?php endif; ?>
-
-		<?php edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

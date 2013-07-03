@@ -7,6 +7,20 @@ body {
 	position: inherit;
 }
 
+.vcard {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	border: none;
+	.fn {
+		font-weight: normal;
+		font-size: 1em;
+	}
+}
+.sep {
+	color: $border-color;
+}
+
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -110,7 +124,10 @@ body {
 .site-navigation {
 	background-color: $site-navigation-bg;
 }
-
+.top-bar .button {
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 /* =Content
 ----------------------------------------------- */
@@ -120,9 +137,9 @@ body {
 }
 
 .hentry {
-	margin: 0 0 1em;
-	padding-bottom: 1.5em;
-	border-bottom: $border-style $border-width $border-color;
+	margin-bottom: $margin;
+	padding-bottom: $margin;
+	border-bottom: double 4px $border-color;
 }
 .byline {
 	display: none;
@@ -131,20 +148,67 @@ body {
 .group-blog .byline {
 	display: inline;
 }
+.page-header {
+	margin-bottom: $margin;
+	padding-bottom: $margin*0.5;
+	border-bottom: double 4px $border-color;
+}
+
+.entry-header {
+	margin-bottom: $margin;
+	padding-bottom: $margin*0.5;
+	border-bottom: $border-style $border-width $border-color;
+}
+.entry-title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.entry-meta {
+	margin-top: 0.5em;
+}
+
 .entry-content,
 .entry-summary {
-	margin: 1em 0 0;
-	@include pie-clearfix;
+	margin: $margin 0 0;
+	@include clearfix;
 }
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 $margin;
 }
 
 .entry-footer {
 	clear: both;
 	@include roundbox;
 	background-color: #eeeeee;
+}
+
+/* =Archive
+----------------------------------------------- */
+.author-info {
+	@include clearfix;
+}
+.avatar {
+	width: 60px;
+	float: left;
+	margin-right: 10px;
+}
+.author-description {
+	overflow: hidden;
+}
+.author-description .vcard {
+	margin-top: 0;
+	margin-bottom: 0.25em;
+	display: block;
+	.fn {
+		font-weight: bold;
+	}
+}
+.author-url {
+	margin-bottom: 0.5em;
+}
+.user_description {
+	line-height: $paragraph-line-height;
 }
 
 /* =Asides
@@ -206,8 +270,8 @@ body {
 ----------------------------------------------- */
 
 .site-content [class*="navigation"] {
-	margin: 0 0 1.5em;
-	@include pie-clearfix;
+	margin: 0 0 $margin;
+	@include clearfix;
 }
 [class*="navigation"] .nav-previous {
 	float: left;

@@ -5,7 +5,7 @@
  * @package foundation4blogtheme
  */
 ?>
-	<div id="secondary" class="widget-area columns small-12 large-4" role="complementary">
+	<div id="secondary" class="widget-area columns small-12 large-4 large-offset-1" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 

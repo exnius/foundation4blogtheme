@@ -20,7 +20,7 @@ $margin: emCalc(30px);
 /* mixin */
 $border-style: solid;
 $border-width: 1px;
-$border-color: #ccc;
+$border-color: lighten($body-font-color, 60%);
 
 @mixin roundbox($padding: 15px) {
 	border: $border-style $border-width $border-color;

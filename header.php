@@ -42,6 +42,10 @@
 
 			<section class="top-bar-section">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'items_wrap' => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>',  'menu_class' => 'left', 'fallback_cb' => 'foundation4blogtheme_page_menu', 'walker' => new foundation4blogtheme_walker_nav_menu ) ); ?>
+				<ul class="right">
+					<li class="divider hide-for-small"></li>
+					<li class="has-form"><?php get_search_form(); ?></li>
+				</ul>
 			</section>
 		</nav></div></div><!-- #site-navigation -->
 	</div>
