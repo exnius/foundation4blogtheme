@@ -64,7 +64,7 @@ body {
 /* =masthead
 ----------------------------------------------- */
 .site-header {
-	padding: 1.5em 0;
+	padding: $margin 0;
 	background-color: $site-header-bg;
 	color: $site-header-text;
 	a {
@@ -89,7 +89,7 @@ body {
 ----------------------------------------------- */
 .site-footer {
 	clear: both;
-	padding: 1.5em 0;
+	padding: $margin 0;
 	background-color: $site-footer-bg;
 	color: $site-footer-text;
 	a {
@@ -107,6 +107,11 @@ body {
 
 /* =Menu
 ----------------------------------------------- */
+.site-navigation {
+	background-color: $site-navigation-bg;
+	margin-bottom: $margin;
+}
+
 
 /* =Content
 ----------------------------------------------- */

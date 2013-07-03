@@ -26,6 +26,7 @@ https://gist.github.com/zurbchris/5068210
 
 */
 /* Color setting */
+/* margin padding */
 /* mixin */
 /* =Global
 ----------------------------------------------- */
@@ -108,7 +109,7 @@ body {
 ----------------------------------------------- */
 /* line 66, sass/_wordpress.scss */
 .site-header {
-  padding: 1.5em 0;
+  padding: 1.875em 0;
   background-color: #2ba6cb;
   color: white;
 }
@@ -139,7 +140,7 @@ body {
 /* line 90, sass/_wordpress.scss */
 .site-footer {
   clear: both;
-  padding: 1.5em 0;
+  padding: 1.875em 0;
   background-color: #333333;
   color: #cccccc;
 }
@@ -161,9 +162,15 @@ body {
 
 /* =Menu
 ----------------------------------------------- */
+/* line 110, sass/_wordpress.scss */
+.site-navigation {
+  background-color: #111111;
+  margin-bottom: 1.875em;
+}
+
 /* =Content
 ----------------------------------------------- */
-/* line 114, sass/_wordpress.scss */
+/* line 119, sass/_wordpress.scss */
 .sticky {
   border: solid 1px #cccccc;
   padding: 15px;
@@ -174,25 +181,25 @@ body {
   border-radius: 5px;
 }
 
-/* line 118, sass/_wordpress.scss */
+/* line 123, sass/_wordpress.scss */
 .hentry {
   margin: 0 0 1em;
   padding-bottom: 1.5em;
   border-bottom: solid 1px #cccccc;
 }
 
-/* line 123, sass/_wordpress.scss */
+/* line 128, sass/_wordpress.scss */
 .byline {
   display: none;
 }
 
-/* line 127, sass/_wordpress.scss */
+/* line 132, sass/_wordpress.scss */
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-/* line 131, sass/_wordpress.scss */
+/* line 136, sass/_wordpress.scss */
 .entry-content,
 .entry-summary {
   margin: 1em 0 0;
@@ -206,13 +213,13 @@ body {
   clear: both;
 }
 
-/* line 135, sass/_wordpress.scss */
+/* line 140, sass/_wordpress.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
 }
 
-/* line 140, sass/_wordpress.scss */
+/* line 145, sass/_wordpress.scss */
 .entry-footer {
   clear: both;
   border: solid 1px #cccccc;
@@ -227,7 +234,7 @@ body {
 
 /* =Asides
 ----------------------------------------------- */
-/* line 150, sass/_wordpress.scss */
+/* line 155, sass/_wordpress.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
@@ -235,7 +242,7 @@ body {
 
 /* =Media
 ----------------------------------------------- */
-/* line 159, sass/_wordpress.scss */
+/* line 164, sass/_wordpress.scss */
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
@@ -244,20 +251,20 @@ body {
   padding: 0;
 }
 
-/* line 165, sass/_wordpress.scss */
+/* line 170, sass/_wordpress.scss */
 .wp-caption {
   margin-bottom: 1em;
   max-width: 100%;
 }
 
-/* line 170, sass/_wordpress.scss */
+/* line 175, sass/_wordpress.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin: 5px auto;
   max-width: 98%;
 }
 
-/* line 175, sass/_wordpress.scss */
+/* line 180, sass/_wordpress.scss */
 .wp-caption-text {
   font-size: 0.9em;
   /* 	color: lighten($body-font-color, 50%); */
@@ -265,7 +272,7 @@ body {
   margin: 0.5em 0;
 }
 
-/* line 182, sass/_wordpress.scss */
+/* line 187, sass/_wordpress.scss */
 .site-content .gallery {
   margin-bottom: 1.5em;
 }
@@ -275,25 +282,25 @@ body {
 	color: lighten($body-font-color, 50%);
 }
 */
-/* line 190, sass/_wordpress.scss */
+/* line 195, sass/_wordpress.scss */
 .gallery-item {
   text-align: center;
 }
 
-/* line 193, sass/_wordpress.scss */
+/* line 198, sass/_wordpress.scss */
 .gallery-item a img {
   max-width: 90%;
   height: auto;
 }
 
-/* line 197, sass/_wordpress.scss */
+/* line 202, sass/_wordpress.scss */
 .gallery-box li {
   margin-right: 0;
 }
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 204, sass/_wordpress.scss */
+/* line 209, sass/_wordpress.scss */
 .site-content [class*="navigation"] {
   margin: 0 0 1.5em;
   *zoom: 1;
@@ -305,13 +312,13 @@ body {
   clear: both;
 }
 
-/* line 208, sass/_wordpress.scss */
+/* line 213, sass/_wordpress.scss */
 [class*="navigation"] .nav-previous {
   float: left;
   width: 50%;
 }
 
-/* line 212, sass/_wordpress.scss */
+/* line 217, sass/_wordpress.scss */
 [class*="navigation"] .nav-next {
   float: right;
   text-align: right;
@@ -320,74 +327,74 @@ body {
 
 /* =Comments
 ----------------------------------------------- */
-/* line 221, sass/_wordpress.scss */
+/* line 226, sass/_wordpress.scss */
 .comments-title {
   font-size: 1.4em;
 }
 
-/* line 225, sass/_wordpress.scss */
+/* line 230, sass/_wordpress.scss */
 .comment-list {
   font-size: 0.8em;
   list-style-type: none;
   margin-left: 0 !important;
 }
-/* line 230, sass/_wordpress.scss */
+/* line 235, sass/_wordpress.scss */
 .comment-list .pingback > p {
   margin-bottom: 0;
 }
-/* line 233, sass/_wordpress.scss */
+/* line 238, sass/_wordpress.scss */
 .comment-list .children {
   list-style-type: none;
   margin-top: 1em;
   margin-left: 180px;
 }
-/* line 237, sass/_wordpress.scss */
+/* line 242, sass/_wordpress.scss */
 .comment-list .children .children {
   margin-left: 3em;
 }
-/* line 242, sass/_wordpress.scss */
+/* line 247, sass/_wordpress.scss */
 .comment-list .depth-1 {
   padding: 1em 0;
   border-bottom: solid 1px #cccccc;
 }
-/* line 246, sass/_wordpress.scss */
+/* line 251, sass/_wordpress.scss */
 .comment-list > .thread-odd {
   background-color: #eeeeee;
 }
-/* line 249, sass/_wordpress.scss */
+/* line 254, sass/_wordpress.scss */
 .comment-list .vcard {
   display: block;
   background-color: #FFFFFF;
 }
-/* line 252, sass/_wordpress.scss */
+/* line 257, sass/_wordpress.scss */
 .comment-list .vcard img {
   margin-right: 5px;
 }
 
 @media only screen and (orientation: portrait) {
-  /* line 259, sass/_wordpress.scss */
+  /* line 264, sass/_wordpress.scss */
   .comment-list .children {
     margin-left: 2em;
   }
 }
-/* line 265, sass/_wordpress.scss */
+/* line 270, sass/_wordpress.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 269, sass/_wordpress.scss */
+/* line 274, sass/_wordpress.scss */
 .bypostauthor > .comment-article .vcard {
   background-color: #ffffcc;
 }
 
 /* =Comments form
 ----------------------------------------------- */
-/* line 276, sass/_wordpress.scss */
+/* line 281, sass/_wordpress.scss */
 #reply-title {
   font-size: 1.4em;
 }
 
-/* line 279, sass/_wordpress.scss */
+/* line 284, sass/_wordpress.scss */
 .required {
   color: red;
   font-weight: bold;
@@ -395,25 +402,25 @@ body {
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 287, sass/_wordpress.scss */
+/* line 292, sass/_wordpress.scss */
 .widget {
   margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets */
-/* line 292, sass/_wordpress.scss */
+/* line 297, sass/_wordpress.scss */
 .widget select {
   max-width: 100%;
 }
 
-/* line 296, sass/_wordpress.scss */
+/* line 301, sass/_wordpress.scss */
 .widget-title,
 .widgettitle {
   font-size: 1.4em;
 }
 
 /* Search widget */
-/* line 300, sass/_wordpress.scss */
+/* line 305, sass/_wordpress.scss */
 .widget_search .submit {
   display: none;
 }
@@ -421,7 +428,7 @@ body {
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 309, sass/_wordpress.scss */
+/* line 314, sass/_wordpress.scss */
 .infinite-scroll .navigation-paging,
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
@@ -429,7 +436,17 @@ body {
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-/* line 314, sass/_wordpress.scss */
+/* line 319, sass/_wordpress.scss */
 .infinity-end.neverending .site-footer {
   display: block;
+}
+
+/* for pc */
+@media only screen and (min-width: 768px) {
+  /* =Menu
+  ----------------------------------------------- */
+  /* line 6, sass/_forpc.scss */
+  .top-bar .name {
+    border-left: solid 1px #2b2b2b;
+  }
 }

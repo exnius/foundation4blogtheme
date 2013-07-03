@@ -84,35 +84,10 @@ class foundation4blogtheme_walker_nav_menu extends Walker_Nav_Menu {
 	}
 
 	// add <li class="divider"></li>
-	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-	
-		$class_names = $value = '';
-	
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'menu-item-' . $item->ID;
-	
-		$class_names = join( ' ', apply_filters( 'foundation4blogtheme_walker_nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-	
-		$id = apply_filters( 'foundation4blogtheme_walker_nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-	
-		$output .= $indent . '<li class="divider"></li><li' . $id . $value . $class_names .'>';
-	
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-	
-		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-		$item_output .= '</a>';
-		$item_output .= $args->after;
-	
-		$output .= apply_filters( 'foundation4blogtheme_walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	function end_el( &$output, $item, $depth = 0, $args = array() ) {
+		$output .= "</li>".'<li class="divider"></li>'."\n";
 	}
+
 } // end foundation4blogtheme_walker_nav_menu class
 
 /**
@@ -154,8 +129,7 @@ class foundation4blogtheme_walker_page extends Walker_Page {
 
 		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
 
-		// add <li class="divider"></li>
-		$output .= $indent . '<li class="divider"></li><li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
+		$output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
 
 		if ( !empty($show_date) ) {
 			if ( 'modified' == $show_date )
@@ -165,7 +139,13 @@ class foundation4blogtheme_walker_page extends Walker_Page {
 			$output .= " " . mysql2date($date_format, $time);
 		}
 	}
-} // end foundation4blogtheme_walker_nav_menu class
+
+	// add <li class="divider"></li>
+	function end_el( &$output, $page, $depth = 0, $args = array() ) {
+		$output .= "</li>".'<li class="divider"></li>'."\n";
+	}
+
+} // end foundation4blogtheme_walker_page class
 
 /**
  * Get our wp_nav_menu() fallback, foundation4blogtheme_page_menu().
@@ -190,7 +170,7 @@ function foundation4blogtheme_page_menu( $args = array() ) {
 	$menu .= str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages($list_args) );
 
 	if ( $menu )
-		$menu = '<ul class="' . esc_attr($args['menu_class']). '">' . $menu . '</ul>';
+		$menu = '<ul class="' . esc_attr($args['menu_class']). '">' . '<li class="divider"></li>' . $menu  . "\n</ul>\n";
 
 	$menu = apply_filters( 'foundation4blogtheme_page_menu', $menu, $args );
 

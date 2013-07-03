@@ -9,6 +9,10 @@ $site-footer-text: #cccccc;
 $site-footer-a: white;
 $site-footer-a-hover: lighten($site-footer-bg, 30%);
 
+$site-navigation-bg: $topbar-bg;
+
+/* margin padding */
+$margin: emCalc(30px);
 
 /* mixin */
 $border-style: solid;
