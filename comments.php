@@ -47,7 +47,7 @@ if ( post_password_required() )
 				 * define foundation4blogtheme_comment() and that will be used instead.
 				 * See foundation4blogtheme_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'foundation4blogtheme_comment' ) );
+				wp_list_comments( array( 'avatar_size' => 40, 'callback' => 'foundation4blogtheme_comment' ) );
 			?>
 		</ol><!-- .comment-list -->
 

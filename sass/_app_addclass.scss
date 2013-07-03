@@ -1,0 +1,15 @@
+.comment-reply-link {
+	@extend .button;
+	@extend .secondary;
+	@extend .small;
+}
+
+.form-submit #submit {
+	@extend .button;
+	@extend .small;
+}
+
+/* Contact Form 7*/
+.wpcf7-submit {
+	@extend .button;
+}

@@ -295,3 +295,24 @@ function foudation4blogtheme_img_caption_shortcode( $val, $attr, $content = null
 	return '<div ' . $id . 'class="wp-caption th radius ' . esc_attr($align) . '" style="width: ' . (10 + (int) $width) . 'px">'
 	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
+
+/**
+ * Password Form Text.
+ */
+function foudation4blogtheme_password_form() {
+	global $post;
+	$label = 'pwbox-' . ( empty($post->ID) ? rand() : $post->ID );
+	$output = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+	<p>' . __("This post is password protected. To view it please enter your password below:") . '</p>
+	<div class="row">
+	<div class="small-4 columns"><label for="' . $label . '" class="right inline">' . __("Password:") . '</label></div>
+	<div class="small-8 columns"><div class="row collapse">
+		<div class="small-9 columns"><input name="post_password" id="' . $label . '" type="password" size="20" /></div>
+		<div class="small-3 columns"><input type="submit" name="Submit" value="' . esc_attr__("Submit") . '" class="button prefix" /></div>
+	</div></div>
+	</div>
+	</form>
+	';
+	return $output;
+}
+add_filter( 'the_password_form', 'foudation4blogtheme_password_form' );

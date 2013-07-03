@@ -65,7 +65,7 @@ get_header(); ?>
 
 					if ( is_author() ) : the_post(); ?>
 					<div class="author-info panel">
-						<div class="author-avatar avatar">
+						<div class="author-avatar">
 							<?php echo get_avatar( get_the_author_meta( 'user_email' ), 60 ); ?>
 						</div><!-- .author-avatar -->
 
