@@ -133,7 +133,7 @@ function foundation4blogtheme_scripts() {
 	
 		// Foundation4
 		wp_enqueue_style( 'foundation4-app', get_template_directory_uri() . '/app.css', array(), '4.2.3' );
-		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.css', array( 'foundation4-app' ), 'Foundation4' );
+		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.min.css', array( 'foundation4-app' ), 'Foundation4' );
 		$wp_styles->add_data( 'ie8-grid-foundation-4', 'conditional', 'lt IE 9' );
 
 		// Modernizr acts as a shim for HTML5 elements for older browsers as well as detection for mobile devices.
