@@ -10,23 +10,25 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" class="site-footer row" role="contentinfo">
-		<div class="site-info columns small-12">
-			<?php do_action( 'foundation4blogtheme_credits' ); ?>
+	<footer id="colophon" class="site-footer" role="contentinfo"><div class="row">
+		<?php do_action( 'foundation4blogtheme_credits' ); ?>
+		<div class="site-info columns small-12">(c)サイト名</div>
+		<div class="theme-info columns small-12">
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'foundation4blogtheme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'foundation4blogtheme' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'foundation4blogtheme' ), 'foundation4blogtheme', '<a href="http://gatespace.jp/" rel="designer">gatespace</a>' ); ?>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Include: %1$s.', 'foundation4blogtheme' ), '<a href="http://foundation.zurb.com/" rel="designer">Foundation 4</a>' ); ?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	</div></footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 <script>
 jQuery(document).ready(function($){
 	$(document).foundation('clearing');
-	$(document).foundation('topbar', {stickyClass: 'sticky-top-bar'});
+	$(document).foundation('topbar', { stickyClass: 'sticky-top-bar' });
 });
 </script>
 </body>

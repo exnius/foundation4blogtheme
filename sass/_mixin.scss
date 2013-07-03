@@ -1,0 +1,10 @@
+/* mixin */
+$border-style: solid;
+$border-width: 1px;
+$border-color: #ccc;
+
+@mixin roundbox($padding: 15px) {
+	border: $border-style $border-width $border-color;
+	padding: $padding;
+	@include border-radius;
+}
