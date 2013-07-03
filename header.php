@@ -31,7 +31,7 @@
 
 	<div id="site-navigation" class="site-navigation">
 		<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'foundation4blogtheme' ); ?>"><?php _e( 'Skip to content', 'foundation4blogtheme' ); ?></a></div>
-		<div class="row"><nav class="navigation-main top-bar" role="navigation">
+		<div class="row"><div class="columns small-12"><nav class="navigation-main top-bar" role="navigation">
 			<ul class="title-area">
 				<li class="name">
 					<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'foundation4blogtheme' ); ?> </a></h1>
@@ -43,10 +43,10 @@
 			<section class="top-bar-section">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'items_wrap' => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>',  'menu_class' => 'left', 'fallback_cb' => 'foundation4blogtheme_page_menu', 'walker' => new foundation4blogtheme_walker_nav_menu ) ); ?>
 			</section>
-		</nav></div><!-- #site-navigation -->
+		</nav></div></div><!-- #site-navigation -->
 	</div>
 
-	<div id="main" class="site-main">
+	<div id="main" class="site-main row">
 
 		<?php // Bread crumb navigation by WP SiteManager. http://www.wp-sitemanager.com/usage/breadcrumb/ ?>
 		<?php if ( class_exists( 'WP_SiteManager_bread_crumb' ) ) : ?>
