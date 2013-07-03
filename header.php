@@ -15,7 +15,6 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
 </head>
 
@@ -23,12 +22,12 @@
 
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header row" role="banner">
+	<header id="masthead" class="site-header" role="banner"><div class="row">
 		<div class="site-branding columns small-12">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-	</header><!-- #masthead -->
+	</div></header><!-- #masthead -->
 
 	<div id="site-navigation" class="site-navigation row">
 		<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'foundation4blogtheme' ); ?>"><?php _e( 'Skip to content', 'foundation4blogtheme' ); ?></a></div>

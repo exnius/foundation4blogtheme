@@ -63,13 +63,26 @@ body {
 
 /* =masthead
 ----------------------------------------------- */
+.site-header {
+	padding: 1.5em 0;
+	background-color: $site-header-bg;
+	color: $site-header-text;
+	a {
+		color: $site-header-a;
+		&:hover, &:active, &:focus {
+			color: $site-header-a-hover;
+		}
+	}
+}
+
 .site-title {
-	margin-top: 0;
-	margin-bottom: 10px;
+	margin: 0;
 }
 .site-description {
-	margin-top: 0;
-	margin-bottom: 10px;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+	font-size: 1em;
+	color: white !important;
 }
 
 /* =colophon
@@ -77,7 +90,14 @@ body {
 .site-footer {
 	clear: both;
 	padding: 1.5em 0;
-	@include contrasted(#333333);
+	background-color: $site-footer-bg;
+	color: $site-footer-text;
+	a {
+		color: $site-footer-a;
+		&:hover, &:active, &:focus {
+			color: $site-footer-a-hover;
+		}
+	}
 }
 .theme-info {
 	margin-top: 1em;
