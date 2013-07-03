@@ -12,7 +12,7 @@
 			<?php foundation4blogtheme_posted_on(); ?>
 			<?php if ( comments_open() ) : ?>
 				<span class="sep"> | </span>
-				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'foundation4blogtheme' ) . '</span>', __( '1 Reply', 'foundation4blogtheme' ), __( '% Replies', 'foundation4blogtheme' ) ); ?>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'foundation4blogtheme' ) . '</span>', __( '1 Comment', 'foundation4blogtheme' ), __( '% Comments', 'foundation4blogtheme' ) ); ?>
 			<?php endif; // comments_open() ?>
 			<?php edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 		</div><!-- #postedon.entry-meta -->

@@ -11,11 +11,6 @@
 if ( ! isset( $content_width ) )
 	$content_width = 553; /* pixels */
 
-/*
- * Load Jetpack compatibility file.
- */
-require( get_template_directory() . '/inc/jetpack.php' );
-
 if ( ! function_exists( 'foundation4blogtheme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -25,21 +20,6 @@ if ( ! function_exists( 'foundation4blogtheme_setup' ) ) :
  * support post thumbnails.
  */
 function foundation4blogtheme_setup() {
-
-	/**
-	 * Custom template tags for this theme.
-	 */
-	require( get_template_directory() . '/inc/template-tags.php' );
-
-	/**
-	 * Custom functions that act independently of the theme templates
-	 */
-	require( get_template_directory() . '/inc/extras.php' );
-
-	/**
-	 * Customizer additions
-	 */
-	require( get_template_directory() . '/inc/customizer.php' );
 
 	/**
 	 * Make theme available for translation
@@ -72,40 +52,17 @@ function foundation4blogtheme_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * Setup the WordPress core custom background feature.
+	 */
+	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
 }
 endif; // foundation4blogtheme_setup
 add_action( 'after_setup_theme', 'foundation4blogtheme_setup' );
-
-/**
- * Setup the WordPress core custom background feature.
- *
- * Use add_theme_support to register support for WordPress 3.4+
- * as well as provide backward compatibility for WordPress 3.3
- * using feature detection of wp_get_theme() which was introduced
- * in WordPress 3.4.
- *
- * @todo Remove the 3.3 support when WordPress 3.6 is released.
- *
- * Hooks into the after_setup_theme action.
- */
-function foundation4blogtheme_register_custom_background() {
-	$args = array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	);
-
-	$args = apply_filters( 'foundation4blogtheme_custom_background_args', $args );
-
-	if ( function_exists( 'wp_get_theme' ) ) {
-		add_theme_support( 'custom-background', $args );
-	} else {
-		define( 'BACKGROUND_COLOR', $args['default-color'] );
-		if ( ! empty( $args['default-image'] ) )
-			define( 'BACKGROUND_IMAGE', $args['default-image'] );
-		add_custom_background();
-	}
-}
-add_action( 'after_setup_theme', 'foundation4blogtheme_register_custom_background' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
@@ -130,62 +87,88 @@ function foundation4blogtheme_scripts() {
 		global $wp_styles;
 
 		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array( 'foundation4-app' ), '20130514' );
-	
+
 		// Foundation4
 		wp_enqueue_style( 'foundation4-app', get_template_directory_uri() . '/app.css', array(), '4.2.3' );
 		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.min.css', array( 'foundation4-app' ), 'Foundation4' );
 		$wp_styles->add_data( 'ie8-grid-foundation-4', 'conditional', 'lt IE 9' );
 
 		// Modernizr acts as a shim for HTML5 elements for older browsers as well as detection for mobile devices.
-		wp_enqueue_script( 'custom.modernizr', get_template_directory_uri() . '/javascripts/vendor/custom.modernizr.js', array(), '4.2.3' );
+		wp_enqueue_script( 'custom.modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '4.2.3' );
 
 		// all scripts
-		// wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation.min.js', array('jquery'), '4.2.3', true );
+		// wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '4.2.3', true );
 
 		// or individually
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation/foundation.js', array('jquery'), '4.2.3', true );
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation/foundation.js', array('jquery'), '4.2.3', true );
 		// foundation4 alert
-		// wp_enqueue_script( 'foundation.alerts', get_template_directory_uri() . '/javascripts/foundation/foundation.alerts.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.alerts', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 clearing
-		wp_enqueue_script( 'foundation.clearing', get_template_directory_uri() . '/javascripts/foundation/foundation.clearing.js', array( 'foundation' ), '4.2.3', true );
+		wp_enqueue_script( 'foundation.clearing', get_template_directory_uri() . '/js/foundation/foundation.clearing.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 cookie
-		// wp_enqueue_script( 'foundation.cookie', get_template_directory_uri() . '/javascripts/foundation/foundation.cookie.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.cookie', get_template_directory_uri() . '/js/foundation/foundation.cookie.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 dropdown
-		// wp_enqueue_script( 'foundation.dropdown', get_template_directory_uri() . '/javascripts/foundation/foundation.dropdown.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.dropdown', get_template_directory_uri() . '/js/foundation/foundation.dropdown.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 forms
-		// wp_enqueue_script( 'foundation.forms', get_template_directory_uri() . '/javascripts/foundation/foundation.forms.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.forms', get_template_directory_uri() . '/js/foundation/foundation.forms.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 joyride
-		// wp_enqueue_script( 'foundation.joyride', get_template_directory_uri() . '/javascripts/foundation/foundation.joyride.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.joyride', get_template_directory_uri() . '/js/foundation/foundation.joyride.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 magellan
-		// wp_enqueue_script( 'foundation.magellan', get_template_directory_uri() . '/javascripts/foundation/foundation.magellan.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.magellan', get_template_directory_uri() . '/js/foundation/foundation.magellan.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 orbit
-		// wp_enqueue_script( 'foundation.orbit', get_template_directory_uri() . '/javascripts/foundation/foundation.orbit.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.orbit', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 placeholder
-		// wp_enqueue_script( 'foundation.placeholder', get_template_directory_uri() . '/javascripts/foundation/foundation.placeholder.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.placeholder', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 reveal
-		// wp_enqueue_script( 'foundation.reveal', get_template_directory_uri() . '/javascripts/foundation/foundation.reveal.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.reveal', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 section
-		// wp_enqueue_script( 'foundation.section', get_template_directory_uri() . '/javascripts/foundation/foundation.section.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.section', get_template_directory_uri() . '/js/foundation/foundation.section.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 tooltips
-		// wp_enqueue_script( 'foundation.tooltips', get_template_directory_uri() . '/javascripts/foundation/foundation.tooltips.js', array( 'foundation' ), '4.2.3', true );
+		// wp_enqueue_script( 'foundation.tooltips', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 topbar
-		wp_enqueue_script( 'foundation.topbar', get_template_directory_uri() . '/javascripts/foundation/foundation.topbar.js', array( 'foundation' ), '4.2.3', true );
-	
-	
-		wp_enqueue_script( 'foundation4blogtheme-skip-link-focus-fix', get_template_directory_uri() . '/javascripts/skip-link-focus-fix.js', array(), '20130115', true );
-	
+		wp_enqueue_script( 'foundation.topbar', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', array( 'foundation' ), '4.2.3', true );
+
+		// @since _s
+		wp_enqueue_script( 'foundation4blogtheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-	
+
 		if ( is_singular() && wp_attachment_is_image() ) {
-			wp_enqueue_script( 'foundation4blogtheme-keyboard-image-navigation', get_template_directory_uri() . '/javascripts/keyboard-image-navigation.js', array( 'jquery' ), '20130115' );
+			wp_enqueue_script( 'foundation4blogtheme-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'foundation4blogtheme_scripts' );
 
+
 /**
- * Implement the Custom Header feature
+ * Implement the Custom Header feature.
  */
-//require( get_template_directory() . '/inc/custom-header.php' );
+//require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * WordPress.com-specific functions and definitions.
+ */
+//require get_template_directory() . '/inc/wpcom.php';

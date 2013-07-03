@@ -10,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area columns small-12">
 		<div id="content" class="site-content" role="main">
 
-			<article id="post-0" class="post error404 not-found">
+			<article id="post-0" class="post not-found">
 				<header class="entry-header">
 					<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'foundation4blogtheme' ); ?></h1>
 				</header><!-- .entry-header -->
@@ -59,7 +59,7 @@ get_header(); ?>
 					</div>
 
 				</div><!-- .entry-content -->
-			</article><!-- #post-0 .post .error404 .not-found -->
+			</article><!-- #post-0 .post .not-found -->
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

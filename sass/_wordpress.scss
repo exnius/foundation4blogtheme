@@ -62,6 +62,13 @@ body {
 		z-index: 100000; /* Above WP toolbar */
 	}
 }
+/* Clearing */
+.clear,
+[class*="content"],
+[class*="site"],
+[class*="navigation"] {
+	@include pie-clearfix;
+}
 
 /* =Layout
 ----------------------------------------------- */
@@ -170,7 +177,6 @@ body {
 .entry-content,
 .entry-summary {
 	margin: $margin 0 0;
-	@include clearfix;
 }
 .page-links {
 	clear: both;
@@ -265,13 +271,15 @@ body {
 .gallery-box li {
 	margin-right: 0;
 }
+.entry-caption {
+	margin-top: 1em;
+}
 
 /* =Navigation
 ----------------------------------------------- */
 
 .site-content [class*="navigation"] {
 	margin: 0 0 $margin;
-	@include clearfix;
 }
 [class*="navigation"] .nav-previous {
 	float: left;
@@ -326,13 +334,6 @@ body {
 		}
 	}
 }
-@media only screen and (orientation: portrait) {
-	.comment-list {
-		.children {
-			margin-left: 2em;
-		}
-	}
-}
 
 .comment-content a {
 	word-wrap: break-word;
@@ -345,6 +346,11 @@ body {
 
 /* =Comments form
 ----------------------------------------------- */
+.search-form label {
+	font-size: 1em;
+	margin: 0;
+}
+
 #reply-title {
 	font-size: 1.4em;
 }

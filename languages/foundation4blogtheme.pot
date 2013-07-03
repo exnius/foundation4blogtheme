@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: foundation4blogtheme 20130515\n"
+"Project-Id-Version: foundation4blogtheme 4.2.3\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/foundation4blogtheme\n"
-"POT-Creation-Date: 2013-05-15 07:37:11+00:00\n"
+"POT-Creation-Date: 2013-07-03 09:19:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,60 +22,52 @@ msgid ""
 "below or a search?"
 msgstr ""
 
-#: 404.php:28
+#: 404.php:32
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:45
+#: 404.php:51
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:21
-msgid "Category Archives: %s"
+#: archive.php:27
+msgid "Author Archives"
 msgstr ""
 
-#: archive.php:24
-msgid "Tag Archives: %s"
+#: archive.php:30
+msgid "Day: %s"
 msgstr ""
 
-#: archive.php:31
-msgid "Author Archives: %s"
+#: archive.php:33
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:36
+msgid "Year: %s"
 msgstr ""
 
 #: archive.php:39
-msgid "Daily Archives: %s"
-msgstr ""
-
-#: archive.php:42
-msgid "Monthly Archives: %s"
-msgstr ""
-
-#: archive.php:45
-msgid "Yearly Archives: %s"
-msgstr ""
-
-#: archive.php:48
 msgid "Asides"
 msgstr ""
 
-#: archive.php:51
+#: archive.php:42
 msgid "Images"
 msgstr ""
 
-#: archive.php:54
+#: archive.php:45
 msgid "Videos"
 msgstr ""
 
-#: archive.php:57
+#: archive.php:48
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:60
+#: archive.php:51
 msgid "Links"
 msgstr ""
 
-#: archive.php:63 sidebar.php:17
+#: archive.php:54 sidebar.php:17
 msgid "Archives"
 msgstr ""
 
@@ -102,142 +94,93 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:27 image.php:95
-msgid "Pages:"
-msgstr ""
-
-#: content-page.php:23 content-single.php:61 content.php:63 image.php:34
-#: image.php:112 inc/template-tags.php:71 inc/template-tags.php:88
+#: content-page.php:12 content-single.php:17 content.php:19 content.php:36
+#: image.php:42 inc/template-tags.php:71 inc/template-tags.php:90
 msgid "Edit"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
-msgid ", "
+#: content-page.php:19 content-single.php:36 content.php:51 image.php:64
+msgid "Pages:"
 msgstr ""
 
-#: content-single.php:37
-msgid ""
-"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink "
-"to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content-single.php:39
-msgid ""
-"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr ""
-
-#: content-single.php:45
-msgid ""
-"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
-"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content-single.php:47
-msgid ""
-"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
-"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content.php:24
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content.php:42
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content.php:53
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content.php:60
+#: content-single.php:15 content.php:17 image.php:40
 msgid "Leave a comment"
 msgstr ""
 
-#: content.php:60
+#: content-single.php:15 content.php:17 image.php:40
 msgid "1 Comment"
 msgstr ""
 
-#: content.php:60
+#: content-single.php:15 content.php:17 image.php:40
 msgid "% Comments"
 msgstr ""
 
-#: footer.php:16
+#: content-single.php:21 content.php:23
+msgid "Categories: "
+msgstr ""
+
+#: content-single.php:23 content.php:25
+msgid ", "
+msgstr ""
+
+#: content-single.php:26 content.php:28
+msgid "Tags: "
+msgstr ""
+
+#: content.php:48
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: footer.php:17
 msgid "A Semantic Personal Publishing Platform"
 msgstr ""
 
-#: footer.php:16
+#: footer.php:17
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:18
+#: footer.php:19
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: footer.php:20
+#: footer.php:21
 msgid "Include: %1$s."
 msgstr ""
 
-#: functions.php:73
+#: functions.php:48
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:72
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:36
+#: header.php:34
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:40
+#: header.php:38
 msgid "Home"
 msgstr ""
 
-#: header.php:43
+#: header.php:41
 msgid "MENU"
 msgstr ""
 
-#: image.php:23
+#: image.php:18
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:19
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: image.php:28
 msgid ""
 "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
 "\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
 "image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
 "rel=\"gallery\">%8$s</a>"
-msgstr ""
-
-#: image.php:38
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr ""
-
-#: image.php:39
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: image.php:104
-msgid ""
-"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
-"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
-"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr ""
-
-#: image.php:106
-msgid ""
-"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
-"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
-"\">Trackback URL</a>."
-msgstr ""
-
-#: image.php:108
-msgid ""
-"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
-"\" title=\"Post a comment\">post a comment</a>."
-msgstr ""
-
-#: image.php:110
-msgid "Both comments and trackbacks are currently closed."
 msgstr ""
 
 #: inc/extras.php:57
@@ -270,24 +213,27 @@ msgstr ""
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:81
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/template-tags.php:87
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:95
+#: inc/template-tags.php:94
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:180
 msgid ""
-"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
-"\"entry-date\" datetime=\"%3$s\">%4$s</time></a><span class=\"byline\"> by "
-"<span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s"
-"\" rel=\"author\">%7$s</a></span></span>"
+"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a><span "
+"class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href="
+"\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
 msgstr ""
 
-#: inc/template-tags.php:128
+#: inc/template-tags.php:185
 msgid "View all posts by %s"
 msgstr ""
 
@@ -316,17 +262,17 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:9
-msgctxt "assistive text"
-msgid "Search"
+#: searchform.php:10 searchform.php:11
+msgctxt "label"
+msgid "Search for:"
 msgstr ""
 
-#: searchform.php:10
+#: searchform.php:11
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: searchform.php:11
+#: searchform.php:13
 msgctxt "submit button"
 msgid "Search"
 msgstr ""

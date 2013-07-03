@@ -36,7 +36,7 @@ if ( post_password_required() )
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foundation4blogtheme' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foundation4blogtheme' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foundation4blogtheme' ) ); ?></div>
-		</nav><!-- #comment-nav-before -->
+		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
