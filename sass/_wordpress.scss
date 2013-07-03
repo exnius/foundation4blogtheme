@@ -27,9 +27,11 @@ body {
 	}
 }
 
+/*
 .label a {
 	color: $label-font-color-alt;
 }
+*/
 
 /* Alignment */
 .alignleft {
@@ -76,10 +78,7 @@ body {
 /* =Layout
 ----------------------------------------------- */
 .site {
-	margin: 2em auto;
-	padding: 1em 1.5em;
-	max-width: 1000px;
-	background-color: $body-bg;
+	margin: 0 auto;
 }
 
 .site-main {
@@ -173,7 +172,7 @@ body {
 }
 .wp-caption-text {
 	font-size: 0.9em;
-	color: lighten($body-font-color, 50%);
+/* 	color: lighten($body-font-color, 50%); */
 	text-align: center;
 	margin: 0.5em 0;
 }
@@ -181,9 +180,11 @@ body {
 .site-content .gallery {
 	margin-bottom: 1.5em;
 }
+/*
 .gallery-caption {
 	color: lighten($body-font-color, 50%);
 }
+*/
 .gallery-item {
 	text-align: center;
 }

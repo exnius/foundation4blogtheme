@@ -4,7 +4,7 @@ Theme URI: https://github.com/gatespace/foundation4blogtheme
 Author: gatespace(Kazue Igarashi)
 Author URI: http://gatespace.jp/
 Description: Starter theme, including the Foundation 4.
-Version: 20130515
+Version: 4.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: foundation4blogtheme
@@ -43,10 +43,11 @@ body {
   margin-left: 2em;
 }
 
+/*
 .label a {
-  color: white;
+	color: $label-font-color-alt;
 }
-
+*/
 /* Alignment */
 .alignleft {
   display: inline;
@@ -96,10 +97,7 @@ body {
 /* =Layout
 ----------------------------------------------- */
 .site {
-  margin: 2em auto;
-  padding: 1em 1.5em;
-  max-width: 1000px;
-  background-color: white;
+  margin: 0 auto;
 }
 
 .site-main {
@@ -214,7 +212,7 @@ body {
 
 .wp-caption-text {
   font-size: 0.9em;
-  color: #a2a2a2;
+  /* 	color: lighten($body-font-color, 50%); */
   text-align: center;
   margin: 0.5em 0;
 }
@@ -223,10 +221,11 @@ body {
   margin-bottom: 1.5em;
 }
 
+/*
 .gallery-caption {
-  color: #a2a2a2;
+	color: lighten($body-font-color, 50%);
 }
-
+*/
 .gallery-item {
   text-align: center;
 }
