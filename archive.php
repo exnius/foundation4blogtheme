@@ -83,7 +83,7 @@ get_header(); ?>
 						 endif; ?>
 						</div><!-- .author-description -->
 					</div><!-- .author-info panel -->
-						<?
+						<?php
 						/* Since we called the_post() above, we need to
 						 * rewind the loop back to the beginning that way
 						 * we can run the loop properly, in full.

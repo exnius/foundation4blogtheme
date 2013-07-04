@@ -136,7 +136,7 @@ body { position: inherit; word-wrap: break-word; }
 
 .wp-caption img[class*="wp-image-"] { display: block; margin: 5px auto; max-width: 98%; }
 
-.wp-caption-text { font-size: 0.875em; margin: 5px 5px 0 5px; color: #6f6f6f; }
+.wp-caption-text, .gallery-caption { font-size: 0.875em; margin: 5px 5px 0 5px; color: #6f6f6f; }
 
 .site-content .gallery { margin-bottom: 1.5em; }
 
@@ -203,6 +203,8 @@ body { position: inherit; word-wrap: break-word; }
 
 .comment-content { clear: both; margin-top: 0.5em; }
 .comment-content p { margin-bottom: 1em; }
+
+.bypostauthor { background-color: transparent; }
 
 /* =Comments form
 ----------------------------------------------- */
