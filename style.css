@@ -65,9 +65,9 @@ body { position: inherit; word-wrap: break-word; }
 .site-header a { color: white; }
 .site-header a:hover, .site-header a:active, .site-header a:focus { text-decoration: underline; }
 
-.site-title { margin: 0; }
+.site-title { margin: 0; color: white; }
 
-.site-description { margin-top: 0.5em; margin-bottom: 0; font-size: 1em; }
+.site-description { margin-top: 0.5em; margin-bottom: 0; font-size: 1em; color: white; }
 
 /* =colophon
 ----------------------------------------------- */
