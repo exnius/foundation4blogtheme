@@ -12,7 +12,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo"><div class="row">
 		<?php do_action( 'foundation4blogtheme_credits' ); ?>
-		<div class="site-info columns small-12">(c)サイト名</div>
+		<div class="site-info columns small-12">
+		<?php
+			$options = get_theme_mods();
+			$copyright = $options['footer_text'] ? esc_html( $options['footer_text'] ) : "&copy; " . esc_html( get_bloginfo( 'name', 'display' ) ) . ".";
+			echo $copyright;
+		?>
+		</div>
 		<div class="theme-info columns small-12">
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'foundation4blogtheme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'foundation4blogtheme' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

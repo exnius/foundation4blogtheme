@@ -73,7 +73,7 @@ body { position: inherit; word-wrap: break-word; }
 ----------------------------------------------- */
 .site-footer { clear: both; padding: 1.875em 0; background-color: #333333; color: #cccccc; }
 .site-footer a { color: white; }
-.site-footer a:hover, .site-footer a:active, .site-footer a:focus { color: gray; }
+.site-footer a:hover, .site-footer a:active, .site-footer a:focus { text-decoration: underline; }
 
 .theme-info { margin-top: 1em; text-align: center; font-size: 0.75em; }
 

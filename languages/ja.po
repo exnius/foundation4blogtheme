@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foundation4blogtheme 1.3-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/foundation4blogtheme\n"
-"POT-Creation-Date: 2013-07-03 13:12:13+00:00\n"
+"POT-Creation-Date: 2013-07-04 07:34:25+00:00\n"
 "PO-Revision-Date: 2013-04-08 16:45+0900\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
@@ -139,19 +139,19 @@ msgstr "タグ: "
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "続きを読む <span class=\"meta-nav\">&rarr;</span>"
 
-#: footer.php:17
+#: footer.php:23
 msgid "A Semantic Personal Publishing Platform"
 msgstr "セマンティックな個人パブリッシングプラットフォーム"
 
-#: footer.php:17
+#: footer.php:23
 msgid "Proudly powered by %s"
 msgstr "Proudly powered by %s"
 
-#: footer.php:19
+#: footer.php:25
 msgid "Theme: %1$s by %2$s."
 msgstr "テーマ: %1$s by %2$s."
 
-#: footer.php:21
+#: footer.php:27
 msgid "Include: %1$s."
 msgstr ""
 
@@ -195,20 +195,42 @@ msgstr ""
 "へのリンク\">%4$s &times; %5$s</a>) ギャラリー名: <a href=\"%6$s\" title="
 "\"%7$s へ戻る\" rel=\"gallery\">%8$s</a>"
 
+#: inc/customizer.php:49
+msgid "Footer Scheme"
+msgstr "フッターエリア"
+
+#: inc/customizer.php:61
+msgid "Copyright"
+msgstr "コピーライト"
+
+#: inc/customizer.php:75
+msgid "Background Color"
+msgstr "背景色"
+
+#: inc/customizer.php:89
+msgid "Text Color"
+msgstr "文字色"
+
+#: inc/customizer.php:103
+msgid "Link Color"
+msgstr "リンク色"
+
 #: inc/extras.php:57
 msgid "Page %s"
 msgstr "ページ %s"
 
-#: inc/extras.php:306
+#: inc/extras.php:314
 msgid ""
 "This post is password protected. To view it please enter your password below:"
-msgstr "この投稿はパスワードで保護されています。<br>表示するにはパスワードを入力してください:"
+msgstr ""
+"この投稿はパスワードで保護されています。<br>表示するにはパスワードを入力して"
+"ください:"
 
-#: inc/extras.php:308
+#: inc/extras.php:316
 msgid "Password:"
 msgstr "パスワード"
 
-#: inc/extras.php:311
+#: inc/extras.php:319
 msgid "Submit"
 msgstr "送信"
 
@@ -326,7 +348,8 @@ msgid "https://github.com/gatespace/foundation4blogtheme"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Starter theme, including the Foundation 4."
+#, fuzzy
+msgid "Starter theme, including the Foundation 4(v4.2.3)."
 msgstr "Foundation 4利用したスターターテーマ。"
 
 #. Author of the plugin/theme
