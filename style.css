@@ -237,7 +237,8 @@ textarea { min-height: 10em; }
 .infinity-end.neverending .site-footer { display: block; }
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
-@media only screen and (min-width: 768px) { /* Menu */
+@media only screen and (min-width: 768px) { .site { overflow: hidden; }
+  /* Menu */
   .top-bar .name { border-left: solid 1px #2b2b2b; }
   /* colophon */
   .site-info { text-align: left; }
