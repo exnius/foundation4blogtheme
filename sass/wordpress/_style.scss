@@ -171,6 +171,7 @@ body {
 	margin-bottom: 0;
 }
 .entry-meta {
+	font-size: emCalc(13px);
 	margin-top: 0.5em;
 }
 
@@ -242,17 +243,15 @@ body {
 	max-width: 98%;
 }
 .wp-caption-text {
-	margin: 0.5em 5px 0 5px;
+	font-size: emCalc(14px);
+	margin: 5px 5px 0 5px;
+	color: lighten($body-font-color, 30%)
 }
 
 .site-content .gallery {
 	margin-bottom: 1.5em;
 }
-/*
-.gallery-caption {
-	color: lighten($body-font-color, 50%);
-}
-*/
+
 .gallery-item {
 	text-align: center;
 }
@@ -266,7 +265,14 @@ body {
 .entry-caption {
 	margin-top: 1em;
 }
+.gallery [class*="block-grid-"] > li {
+	display: inline-block;
+}
+@for $i from 1 through 12 {
+.gallery .small-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: both; }
+}
 
+*/
 /* =Navigation
 ----------------------------------------------- */
 

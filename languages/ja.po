@@ -181,7 +181,7 @@ msgstr "<span class=\"meta-nav\">&larr;</span> 前へ"
 
 #: image.php:19
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr "次へ <span class=\"meta-nav\">&rarr;/span>"
+msgstr "次へ <span class=\"meta-nav\">&rarr;</span>"
 
 #: image.php:28
 msgid ""

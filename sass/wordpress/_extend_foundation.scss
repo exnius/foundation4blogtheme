@@ -1,6 +1,10 @@
 .sticky {
 	@extend .panel;
 }
+.more-link {
+	@extend .button;
+	@extend .small;
+}
 
 .comment-reply-link {
 	@extend .button;

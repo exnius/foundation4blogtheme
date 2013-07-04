@@ -1,216 +1,86 @@
 /*
-Theme Name: foundation4blogtheme
-Theme URI: https://github.com/gatespace/foundation4blogtheme
-Author: gatespace(Kazue Igarashi)
-Author URI: http://gatespace.jp/
-Description: Starter theme, including the Foundation 4(v4.2.3).
-Version: 20130703
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: foundation4blogtheme
-Domain Path: /languages/
-Tags:
+Syntax error: Invalid CSS after "*/": expected identifier, was "/* =Navigation"
+        on line 275 of /Users/netmac/Sites/wordpress3.5/wp-content/themes/foundation4blogtheme/sass/wordpress/_style.scss
+        from line 36 of /Users/netmac/Sites/wordpress3.5/wp-content/themes/foundation4blogtheme/sass/style.scss
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Foundation is made by ZURB, a product design company in Campbell, California.
-We've put more than 15 years of experience building web products, services and websites into this framework.
-http://foundation.zurb.com/
-
-Foundation 4 Documentation
-http://foundation.zurb.com/docs/
-
-ie8-grid-foundation-4.css
-https://gist.github.com/zurbchris/5068210
-
+Backtrace:
+/Users/netmac/Sites/wordpress3.5/wp-content/themes/foundation4blogtheme/sass/wordpress/_style.scss:275
+/Users/netmac/Sites/wordpress3.5/wp-content/themes/foundation4blogtheme/sass/style.scss:36
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:1148:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:1084:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:1066:in `expr!'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:660:in `reference_combinator'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:654:in `combinator'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:646:in `_selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:619:in `selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:603:in `selector_sequence'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:528:in `ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:553:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:546:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:82:in `stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:27:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:342:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:274:in `to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:225:in `visit_import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Library/Ruby/Site/1.8/rubygems/core_ext/kernel_require.rb:45:in `to_proc'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `modified'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23
 */
-/* Color setting */
-/* margin padding */
-/* =Global
------------------------------------------------ */
-html { background-color: transparent; }
-
-body { position: inherit; word-wrap: break-word; }
-
-.vcard { display: inline; margin: 0; padding: 0; border: none; }
-.vcard .fn { font-weight: normal; font-size: 1em; }
-
-.sep { color: #dddddd; }
-
-/* Alignment */
-.alignleft { display: inline; float: left; margin-right: 1.5em; }
-
-.alignright { display: inline; float: right; margin-left: 1.5em; }
-
-.aligncenter { clear: both; display: block; margin: 0 auto; }
-
-/* Text meant only for screen readers */
-.screen-reader-text { clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
-.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar */ }
-
-/* Clearing */
-.clear, [class*="content"], [class*="site"], [class*="navigation"] { *zoom: 1; }
-.clear:after, [class*="content"]:after, [class*="site"]:after, [class*="navigation"]:after { content: ""; display: table; clear: both; }
-
-/* =Layout
------------------------------------------------ */
-.site { margin: 0 auto; }
-
-.site-main { clear: both; padding: 1.875em 0; background-color: white; }
-
-/* =masthead
------------------------------------------------ */
-.site-header { padding: 1.875em 0; background-color: #2ba6cb; color: white; }
-.site-header a { color: white; }
-.site-header a:hover, .site-header a:active, .site-header a:focus { color: #a3dbec; }
-
-.site-title { margin: 0; }
-
-.site-description { margin-top: 0.5em; margin-bottom: 0; font-size: 1em; color: white !important; }
-
-/* =colophon
------------------------------------------------ */
-.site-footer { clear: both; padding: 1.875em 0; background-color: #333333; color: #cccccc; }
-.site-footer a { color: white; }
-.site-footer a:hover, .site-footer a:active, .site-footer a:focus { color: gray; }
-
-.theme-info { margin-top: 1em; text-align: center; font-size: 0.75em; }
-
-/* =Menu
------------------------------------------------ */
-.site-navigation { background-color: #111111; }
-
-.top-bar .button { padding-top: 0; padding-bottom: 0; }
-
-/* =Content
------------------------------------------------ */
-.hentry { margin-bottom: 1.875em; padding-bottom: 1.875em; }
-.hentry:not(.sticky) { border-bottom: double 4px #dddddd; }
-
-.byline { display: none; }
-
-.single .byline, .group-blog .byline { display: inline; }
-
-.page-header { margin-bottom: 1.875em; padding-bottom: 0.9375em; border-bottom: double 4px #dddddd; }
-
-.entry-header { margin-bottom: 1.875em; padding-bottom: 0.9375em; border-bottom: solid 1px #dddddd; }
-
-.entry-title { margin-top: 0; margin-bottom: 0; }
-
-.entry-meta { margin-top: 0.5em; }
-
-.entry-content, .entry-summary { margin: 1.875em 0 0; }
-
-.page-links { clear: both; margin: 0 0 1.875em; }
-
-/* =Archive
------------------------------------------------ */
-.author-info { *zoom: 1; }
-.author-info:after { content: ""; display: table; clear: both; }
-
-.author-avatar { width: 60px; float: left; margin-right: 10px; }
-
-.author-description { overflow: hidden; }
-
-.author-description .vcard { margin-top: 0; margin-bottom: 0.25em; display: block; }
-.author-description .vcard .fn { font-weight: bold; }
-
-.author-url { margin-bottom: 0.5em; }
-
-.user_description { line-height: 1.6; }
-
-/* =Asides
------------------------------------------------ */
-.blog .format-aside .entry-title, .archive .format-aside .entry-title { display: none; }
-
-/* =Media
------------------------------------------------ */
-.entry-content img.wp-smiley, .comment-content img.wp-smiley { border: none; margin-bottom: 0; margin-top: 0; padding: 0; }
-
-.wp-caption { margin-bottom: 1em; max-width: 100%; }
-
-.wp-caption img[class*="wp-image-"] { display: block; margin: 5px auto; max-width: 98%; }
-
-.wp-caption-text { margin: 0.5em 5px 0 5px; }
-
-.site-content .gallery { margin-bottom: 1.5em; }
-
-/*
-.gallery-caption {
-	color: lighten($body-font-color, 50%);
-}
-*/
-.gallery-item { text-align: center; }
-
-.gallery-item a img { max-width: 90%; height: auto; }
-
-.gallery-box li { margin-right: 0; }
-
-.entry-caption { margin-top: 1em; }
-
-/* =Navigation
------------------------------------------------ */
-.site-content [class*="navigation"] { margin: 0 0 1.875em; }
-
-[class*="navigation"] .nav-previous { float: left; width: 50%; }
-
-[class*="navigation"] .nav-next { float: right; text-align: right; width: 50%; }
-
-/* =Comments
------------------------------------------------ */
-.comments-area { margin-top: 3.75em; }
-
-.comments-title { font-size: 1.25em; }
-
-.comment-list { font-size: 0.875em; list-style-type: none; margin-left: 0 !important; }
-.comment-list .children { list-style-type: none; margin: 0; margin-left: 45px; }
-.comment-list .depth-1 { padding: 1em 0; border-bottom: dashed 1px #dddddd; }
-
-.comment-body .vcard { display: block; }
-
-.comment-meta { *zoom: 1; }
-.comment-meta:after { content: ""; display: table; clear: both; }
-.comment-meta .comment-avatar { width: 40px; float: left; margin-right: 5px; }
-.comment-meta .comment-metadata { padding-left: 5px; overflow: hidden; line-height: 1.4; }
-
-.comment-author .fn { font-style: normal; }
-
-.comment-content { clear: both; margin-top: 0.5em; }
-.comment-content p { margin-bottom: 1em; }
-
-/* =Comments form
------------------------------------------------ */
-#reply-title { font-size: 1.25em; }
-
-.required { color: red; font-weight: bold; }
-
-.comment-notes, .logged-in-as { font-size: 0.875em; }
-
-textarea { min-height: 10em; }
-
-/* =Widgets
------------------------------------------------ */
-.widget { margin: 0 0 1.5em; }
-
-/* Make sure select elements fit in widgets */
-.widget select { max-width: 100%; }
-
-.widget-title, .widgettitle { font-size: 1.4em; }
-
-/* Search widget */
-.widget_search .submit { display: none; }
-
-.search-form label { font-size: 1em; margin: 0; }
-
-/* =Infinite Scroll
------------------------------------------------ */
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .navigation-paging, .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */ display: none; }
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-.infinity-end.neverending .site-footer { display: block; }
-
-/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
-@media only screen and (min-width: 768px) { /* Menu */
-  .top-bar .name { border-left: solid 1px #2b2b2b; } }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"*/\": expected identifier, was \"/* =Navigation\"\A         on line 275 of /Users/netmac/Sites/wordpress3.5/wp-content/themes/foundation4blogtheme/sass/wordpress/_style.scss\A         from line 36 of /Users/netmac/Sites/wordpress3.5/wp-content/themes/foundation4blogtheme/sass/style.scss"; }

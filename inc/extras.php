@@ -185,10 +185,16 @@ function foundation4blogtheme_page_menu( $args = array() ) {
 add_filter('post_gallery', 'foudation4blogtheme_gallery_shortcode', 10, 2);
 /* redesign gallery style. originally in wp-includes/media.php */
 function foudation4blogtheme_gallery_shortcode($output, $attr) {
-	$post = get_post();
+	global $post, $wp_locale;
 
 	static $instance = 0;
 	$instance++;
+
+	if ( isset( $attr['orderby'] ) ) {
+		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
+		if ( !$attr['orderby'] )
+			unset( $attr['orderby'] );
+	}
 
 	extract(shortcode_atts(array(
 		'order'      => 'ASC',
@@ -206,23 +212,25 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 	$id = intval($id);
 	if ( 'RAND' == $order )
 		$orderby = 'none';
-
+ 
 	if ( !empty($include) ) {
+		$include = preg_replace( '/[^0-9,]+/', '', $include );
 		$_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-
+ 
 		$attachments = array();
 		foreach ( $_attachments as $key => $val ) {
 			$attachments[$val->ID] = $_attachments[$key];
 		}
 	} elseif ( !empty($exclude) ) {
+		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
 		$attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
 	} else {
 		$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
 	}
-
+ 
 	if ( empty($attachments) )
 		return '';
-
+ 
 	if ( is_feed() ) {
 		$output = "\n";
 		foreach ( $attachments as $att_id => $attachment )
@@ -232,7 +240,6 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 
 	$itemtag = tag_escape($itemtag);
 	$captiontag = tag_escape($captiontag);
-
 	$columns = intval($columns);
 	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
 	$float = is_rtl() ? 'right' : 'left';
@@ -240,10 +247,11 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 	$selector = "gallery-{$instance}";
 
 	$gallery_style = $gallery_div = '';
-
+	if ( apply_filters( 'use_default_gallery_style', true ) )
+		$gallery_style = "<!-- no style in default gallery. -->";
 	$size_class = sanitize_html_class( $size );
 	$gallery_div = "<div id='{$selector}' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'><ul class='gallery-box small-block-grid-{$columns} clearing-thumbs' data-clearing>\n";
-	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
+	$output = apply_filters( 'foudation4blogtheme_gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
@@ -260,8 +268,8 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 		$output .= "<a href='{$link[0]}'>{$attachmentimg}</a>";
 		if ( $captiontag && trim($attachment->post_excerpt) ) {
 			$output .= "
-				<{$captiontag} class='wp-caption-text gallery-caption screen-reader-text'>
-				" . wptexturize($attachment->post_excerpt) . "
+				<{$captiontag} class='wp-caption-text gallery-caption'>
+				" . $caption . "
 				</{$captiontag}>";
 		}
 		$output .= "</{$itemtag}>";
