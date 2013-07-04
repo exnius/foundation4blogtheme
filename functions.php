@@ -86,7 +86,7 @@ function foundation4blogtheme_scripts() {
 	if ( ! is_admin() ) {
 		global $wp_styles;
 
-		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array( 'foundation4' ), '20130514' );
+		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array( 'foundation4' ), '20130703' );
 
 		// Foundation4
 		wp_enqueue_style( 'foundation4', get_template_directory_uri() . '/foundation.css', array(), '4.2.3' );
