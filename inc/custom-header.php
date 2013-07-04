@@ -28,7 +28,7 @@
 function foundation4blogtheme_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'foundation4blogtheme_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000',
+		'default-text-color'     => 'fff',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
@@ -63,6 +63,7 @@ function foundation4blogtheme_header_style() {
 		.site-title,
 		.site-description {
 			position: absolute;
+			clip: rect(1px 1px 1px 1px); /* IE7 */
 			clip: rect(1px, 1px, 1px, 1px);
 		}
 	<?php

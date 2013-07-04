@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foundation4blogtheme 20130703\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/foundation4blogtheme\n"
-"POT-Creation-Date: 2013-07-04 07:34:25+00:00\n"
+"POT-Creation-Date: 2013-07-04 10:15:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -155,15 +155,15 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:34
+#: header.php:41
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:38
+#: header.php:45
 msgid "Home"
 msgstr ""
 
-#: header.php:41
+#: header.php:48
 msgid "MENU"
 msgstr ""
 
@@ -184,22 +184,30 @@ msgid ""
 msgstr ""
 
 #: inc/customizer.php:49
-msgid "Footer Scheme"
+msgid "Header Scheme"
 msgstr ""
 
-#: inc/customizer.php:61
-msgid "Copyright"
-msgstr ""
-
-#: inc/customizer.php:75
+#: inc/customizer.php:62 inc/customizer.php:124
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/customizer.php:76 inc/customizer.php:138
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer.php:103
+#: inc/customizer.php:89
+msgid "Logo Image"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Footer Scheme"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer.php:152
 msgid "Link Color"
 msgstr ""
 

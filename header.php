@@ -25,7 +25,14 @@
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner"><div class="row">
 		<div class="site-branding columns small-12">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<?php $logo_image = get_theme_mod( 'logo_image' ); ?>
+			<?php if ( !empty( $logo_image ) ) : ?>
+				<img src="<?php echo esc_attr( $logo_image ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+			<?php else :  ?>
+				<?php bloginfo( 'name' ); ?>
+			<?php endif; ?>
+			</a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 	</div></header><!-- #masthead -->

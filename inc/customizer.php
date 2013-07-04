@@ -43,11 +43,60 @@ function get_theme_option_name( $key = null ) {
 function foundation4blogtheme_customize_setup( $wp_customize ) {
 
 	/**
+	 * customize for Header.
+	 */
+	$wp_customize->add_section( 'foundation4blogtheme_header_scheme', array(
+		'title'    => __('Header Scheme', 'foundation4blogtheme'),
+		'priority' => 200,
+	));
+
+	// = Color Picker for header background color.
+	$wp_customize->add_setting( get_theme_option_name( 'header_bg_color' ), array(
+		'default'           => '2ba6cb',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, get_theme_option_name( 'header_bg_color' ), array(
+		'label'    => __('Background Color', 'foundation4blogtheme'),
+		'section'  => 'foundation4blogtheme_header_scheme',
+		'settings' => get_theme_option_name( 'header_bg_color' ),
+	)));
+
+	// = Color Picker for header text color.
+	$wp_customize->add_setting( get_theme_option_name( 'header_text_color' ) , array(
+		'default'           => 'ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_theme_option_name( 'header_text_color' ), array(
+		'label'    => __('Text Color', 'foundation4blogtheme'),
+		'section'  => 'foundation4blogtheme_header_scheme',
+		'settings' => get_theme_option_name( 'header_text_color' )	,
+	)));
+
+	// = header logo.
+	$wp_customize->add_setting( get_theme_option_name( 'logo_image' ), array(
+		'default'           => '',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, get_theme_option_name( 'logo_image' ), array(
+		'label'    => __('Logo Image', 'foundation4blogtheme'),
+		'section'  => 'foundation4blogtheme_header_scheme',
+		'settings' => get_theme_option_name( 'logo_image' )
+	)));
+
+	/**
 	 * customize for footer.
 	 */
-	$wp_customize->add_section('foundation4blogtheme_footer_scheme', array(
+	$wp_customize->add_section( 'foundation4blogtheme_footer_scheme', array(
 		'title'    => __('Footer Scheme', 'foundation4blogtheme'),
-		'priority' => 120,
+		'priority' => 210,
 	));
 
 	// = Text Input for Copyright
@@ -71,7 +120,7 @@ function foundation4blogtheme_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, get_theme_option_name( 'footer_bg_color' ), array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_theme_option_name( 'footer_bg_color' ), array(
 		'label'    => __('Background Color', 'foundation4blogtheme'),
 		'section'  => 'foundation4blogtheme_footer_scheme',
 		'settings' => get_theme_option_name( 'footer_bg_color' ),
@@ -85,7 +134,7 @@ function foundation4blogtheme_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, get_theme_option_name( 'footer_text_color' ), array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_theme_option_name( 'footer_text_color' ), array(
 		'label'    => __('Text Color', 'foundation4blogtheme'),
 		'section'  => 'foundation4blogtheme_footer_scheme',
 		'settings' => get_theme_option_name( 'footer_text_color' )	,
@@ -99,7 +148,7 @@ function foundation4blogtheme_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, get_theme_option_name( 'footer_link_color' ), array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_theme_option_name( 'footer_link_color' ), array(
 		'label'    => __('Link Color', 'foundation4blogtheme'),
 		'section'  => 'foundation4blogtheme_footer_scheme',
 		'settings' => get_theme_option_name( 'footer_link_color' )	,
@@ -118,6 +167,16 @@ function foundation4blogtheme_customize_style() {
 	$options = get_theme_mods();
 	?>
 	<style type="text/css" id="foundation4blogtheme_customize_style">
+		<?php if ( !empty( $options['header_bg_color'] ) ) : ?>
+		.site-header {
+			background-color: <?php echo esc_html( $options['header_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['header_text_color'] ) ) : ?>
+		.site-header, .site-header a, .site-description {
+			color: <?php echo esc_html( $options['header_text_color'] ); ?>;
+		}
+		<?php endif; ?>
 		<?php if ( !empty( $options['footer_bg_color'] ) ) : ?>
 		.site-footer {
 			background-color: <?php echo esc_html( $options['footer_bg_color'] ); ?>;

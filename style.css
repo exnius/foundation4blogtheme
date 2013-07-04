@@ -63,11 +63,11 @@ body { position: inherit; word-wrap: break-word; }
 ----------------------------------------------- */
 .site-header { padding: 1.875em 0; background-color: #2ba6cb; color: white; }
 .site-header a { color: white; }
-.site-header a:hover, .site-header a:active, .site-header a:focus { color: #a3dbec; }
+.site-header a:hover, .site-header a:active, .site-header a:focus { text-decoration: underline; }
 
 .site-title { margin: 0; }
 
-.site-description { margin-top: 0.5em; margin-bottom: 0; font-size: 1em; color: white !important; }
+.site-description { margin-top: 0.5em; margin-bottom: 0; font-size: 1em; }
 
 /* =colophon
 ----------------------------------------------- */
