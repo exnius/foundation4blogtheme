@@ -113,6 +113,7 @@ body {
 	padding: $margin 0;
 	background-color: $site-footer-bg;
 	color: $site-footer-text;
+	text-align: center;
 	a {
 		color: $site-footer-a;
 		&:hover, &:active, &:focus {
@@ -120,10 +121,17 @@ body {
 		}
 	}
 }
-.theme-info {
-	margin-top: 1em;
-	text-align: center;
+.site-info {
 	font-size: emCalc(12px);
+	line-height: 1.4;
+}
+.theme-info {
+	font-size: emCalc(12px);
+	line-height: 1.4;
+	margin-top: 0.5em;
+}
+.footer-hide-for-small {
+	display: none;
 }
 
 /* =Menu

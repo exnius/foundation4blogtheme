@@ -71,11 +71,15 @@ body { position: inherit; word-wrap: break-word; }
 
 /* =colophon
 ----------------------------------------------- */
-.site-footer { clear: both; padding: 1.875em 0; background-color: #333333; color: #cccccc; }
+.site-footer { clear: both; padding: 1.875em 0; background-color: #333333; color: #cccccc; text-align: center; }
 .site-footer a { color: white; }
 .site-footer a:hover, .site-footer a:active, .site-footer a:focus { text-decoration: underline; }
 
-.theme-info { margin-top: 1em; text-align: center; font-size: 0.75em; }
+.site-info { font-size: 0.75em; line-height: 1.4; }
+
+.theme-info { font-size: 0.75em; line-height: 1.4; margin-top: 0.5em; }
+
+.footer-hide-for-small { display: none; }
 
 /* =Menu
 ----------------------------------------------- */
@@ -234,4 +238,8 @@ textarea { min-height: 10em; }
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 @media only screen and (min-width: 768px) { /* Menu */
-  .top-bar .name { border-left: solid 1px #2b2b2b; } }
+  .top-bar .name { border-left: solid 1px #2b2b2b; }
+  /* colophon */
+  .site-info { text-align: left; }
+  .theme-info { margin-top: 0; text-align: right; }
+  .footer-hide-for-small { display: inline; } }

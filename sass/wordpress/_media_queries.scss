@@ -6,4 +6,15 @@
 		border-left: $topbar-divider-border-bottom;
 	}
 
+	/* colophon */
+	.site-info {
+		text-align: left;
+	}
+	.theme-info {
+		margin-top: 0;
+		text-align: right;
+	}
+	.footer-hide-for-small {
+		display: inline;
+	}
 }
