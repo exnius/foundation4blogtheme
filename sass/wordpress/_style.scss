@@ -92,7 +92,7 @@ body {
 	a {
 		color: $site-header-a;
 		&:hover, &:active, &:focus {
-			color: $site-header-a-hover;
+			text-decoration: underline;
 		}
 	}
 }
@@ -104,7 +104,6 @@ body {
 	margin-top: 0.5em;
 	margin-bottom: 0;
 	font-size: 1em;
-	color: white !important;
 }
 
 /* =colophon
@@ -117,7 +116,7 @@ body {
 	a {
 		color: $site-footer-a;
 		&:hover, &:active, &:focus {
-			color: $site-footer-a-hover;
+			text-decoration: underline;
 		}
 	}
 }

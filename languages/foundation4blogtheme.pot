@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: foundation4blogtheme 4.2.3\n"
+"Project-Id-Version: foundation4blogtheme 20130703\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/foundation4blogtheme\n"
-"POT-Creation-Date: 2013-07-03 13:12:13+00:00\n"
+"POT-Creation-Date: 2013-07-04 10:15:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -131,19 +131,19 @@ msgstr ""
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: footer.php:17
+#: footer.php:23
 msgid "A Semantic Personal Publishing Platform"
 msgstr ""
 
-#: footer.php:17
+#: footer.php:23
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:19
+#: footer.php:25
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: footer.php:21
+#: footer.php:27
 msgid "Include: %1$s."
 msgstr ""
 
@@ -155,15 +155,15 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:34
+#: header.php:41
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:38
+#: header.php:45
 msgid "Home"
 msgstr ""
 
-#: header.php:41
+#: header.php:48
 msgid "MENU"
 msgstr ""
 
@@ -183,20 +183,48 @@ msgid ""
 "rel=\"gallery\">%8$s</a>"
 msgstr ""
 
+#: inc/customizer.php:49
+msgid "Header Scheme"
+msgstr ""
+
+#: inc/customizer.php:62 inc/customizer.php:124
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:76 inc/customizer.php:138
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Logo Image"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Footer Scheme"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer.php:152
+msgid "Link Color"
+msgstr ""
+
 #: inc/extras.php:57
 msgid "Page %s"
 msgstr ""
 
-#: inc/extras.php:306
+#: inc/extras.php:314
 msgid ""
 "This post is password protected. To view it please enter your password below:"
 msgstr ""
 
-#: inc/extras.php:308
+#: inc/extras.php:316
 msgid "Password:"
 msgstr ""
 
-#: inc/extras.php:311
+#: inc/extras.php:319
 msgid "Submit"
 msgstr ""
 
@@ -307,7 +335,7 @@ msgid "https://github.com/gatespace/foundation4blogtheme"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Starter theme, including the Foundation 4."
+msgid "Starter theme, including the Foundation 4(v4.2.3)."
 msgstr ""
 
 #. Author of the plugin/theme
