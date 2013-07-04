@@ -29,592 +29,209 @@ https://gist.github.com/zurbchris/5068210
 /* margin padding */
 /* =Global
 ----------------------------------------------- */
-/* line 3, sass/wordpress/_style.scss */
-html {
-  background-color: transparent;
-}
+html { background-color: transparent; }
 
-/* line 6, sass/wordpress/_style.scss */
-body {
-  position: inherit;
-  word-wrap: break-word;
-}
+body { position: inherit; word-wrap: break-word; }
 
-/* line 11, sass/wordpress/_style.scss */
-.vcard {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-/* line 16, sass/wordpress/_style.scss */
-.vcard .fn {
-  font-weight: normal;
-  font-size: 1em;
-}
+.vcard { display: inline; margin: 0; padding: 0; border: none; }
+.vcard .fn { font-weight: normal; font-size: 1em; }
 
-/* line 21, sass/wordpress/_style.scss */
-.sep {
-  color: #dddddd;
-}
+.sep { color: #dddddd; }
 
 /* Alignment */
-/* line 26, sass/wordpress/_style.scss */
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
-}
+.alignleft { display: inline; float: left; margin-right: 1.5em; }
 
-/* line 31, sass/wordpress/_style.scss */
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
-}
+.alignright { display: inline; float: right; margin-left: 1.5em; }
 
-/* line 36, sass/wordpress/_style.scss */
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto;
-}
+.aligncenter { clear: both; display: block; margin: 0 auto; }
 
 /* Text meant only for screen readers */
-/* line 43, sass/wordpress/_style.scss */
-.screen-reader-text {
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-}
-/* line 47, sass/wordpress/_style.scss */
-.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar */
-}
+.screen-reader-text { clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar */ }
 
 /* Clearing */
-/* line 70, sass/wordpress/_style.scss */
-.clear,
-[class*="content"],
-[class*="site"],
-[class*="navigation"] {
-  *zoom: 1;
-}
-/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.clear:after,
-[class*="content"]:after,
-[class*="site"]:after,
-[class*="navigation"]:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.clear, [class*="content"], [class*="site"], [class*="navigation"] { *zoom: 1; }
+.clear:after, [class*="content"]:after, [class*="site"]:after, [class*="navigation"]:after { content: ""; display: table; clear: both; }
 
 /* =Layout
 ----------------------------------------------- */
-/* line 76, sass/wordpress/_style.scss */
-.site {
-  margin: 0 auto;
-}
+.site { margin: 0 auto; }
 
-/* line 80, sass/wordpress/_style.scss */
-.site-main {
-  clear: both;
-  padding: 1.875em 0;
-  background-color: white;
-}
+.site-main { clear: both; padding: 1.875em 0; background-color: white; }
 
 /* =masthead
 ----------------------------------------------- */
-/* line 88, sass/wordpress/_style.scss */
-.site-header {
-  padding: 1.875em 0;
-  background-color: #2ba6cb;
-  color: white;
-}
-/* line 92, sass/wordpress/_style.scss */
-.site-header a {
-  color: white;
-}
-/* line 94, sass/wordpress/_style.scss */
-.site-header a:hover, .site-header a:active, .site-header a:focus {
-  color: #a3dbec;
-}
+.site-header { padding: 1.875em 0; background-color: #2ba6cb; color: white; }
+.site-header a { color: white; }
+.site-header a:hover, .site-header a:active, .site-header a:focus { color: #a3dbec; }
 
-/* line 100, sass/wordpress/_style.scss */
-.site-title {
-  margin: 0;
-}
+.site-title { margin: 0; }
 
-/* line 103, sass/wordpress/_style.scss */
-.site-description {
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  font-size: 1em;
-  color: white !important;
-}
+.site-description { margin-top: 0.5em; margin-bottom: 0; font-size: 1em; color: white !important; }
 
 /* =colophon
 ----------------------------------------------- */
-/* line 112, sass/wordpress/_style.scss */
-.site-footer {
-  clear: both;
-  padding: 1.875em 0;
-  background-color: #333333;
-  color: #cccccc;
-}
-/* line 117, sass/wordpress/_style.scss */
-.site-footer a {
-  color: white;
-}
-/* line 119, sass/wordpress/_style.scss */
-.site-footer a:hover, .site-footer a:active, .site-footer a:focus {
-  color: gray;
-}
+.site-footer { clear: both; padding: 1.875em 0; background-color: #333333; color: #cccccc; }
+.site-footer a { color: white; }
+.site-footer a:hover, .site-footer a:active, .site-footer a:focus { color: gray; }
 
-/* line 124, sass/wordpress/_style.scss */
-.theme-info {
-  margin-top: 1em;
-  text-align: center;
-  font-size: 0.75em;
-}
+.theme-info { margin-top: 1em; text-align: center; font-size: 0.75em; }
 
 /* =Menu
 ----------------------------------------------- */
-/* line 132, sass/wordpress/_style.scss */
-.site-navigation {
-  background-color: #111111;
-}
+.site-navigation { background-color: #111111; }
 
-/* line 135, sass/wordpress/_style.scss */
-.top-bar .button {
-  padding-top: 0;
-  padding-bottom: 0;
-}
+.top-bar .button { padding-top: 0; padding-bottom: 0; }
 
 /* =Content
 ----------------------------------------------- */
-/* line 143, sass/wordpress/_style.scss */
-.hentry {
-  margin-bottom: 1.875em;
-  padding-bottom: 1.875em;
-}
-/* line 146, sass/wordpress/_style.scss */
-.hentry:not(.sticky) {
-  border-bottom: double 4px #dddddd;
-}
+.hentry { margin-bottom: 1.875em; padding-bottom: 1.875em; }
+.hentry:not(.sticky) { border-bottom: double 4px #dddddd; }
 
-/* line 151, sass/wordpress/_style.scss */
-.byline {
-  display: none;
-}
+.byline { display: none; }
 
-/* line 155, sass/wordpress/_style.scss */
-.single .byline,
-.group-blog .byline {
-  display: inline;
-}
+.single .byline, .group-blog .byline { display: inline; }
 
-/* line 158, sass/wordpress/_style.scss */
-.page-header {
-  margin-bottom: 1.875em;
-  padding-bottom: 0.9375em;
-  border-bottom: double 4px #dddddd;
-}
+.page-header { margin-bottom: 1.875em; padding-bottom: 0.9375em; border-bottom: double 4px #dddddd; }
 
-/* line 164, sass/wordpress/_style.scss */
-.entry-header {
-  margin-bottom: 1.875em;
-  padding-bottom: 0.9375em;
-  border-bottom: solid 1px #dddddd;
-}
+.entry-header { margin-bottom: 1.875em; padding-bottom: 0.9375em; border-bottom: solid 1px #dddddd; }
 
-/* line 169, sass/wordpress/_style.scss */
-.entry-title {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+.entry-title { margin-top: 0; margin-bottom: 0; }
 
-/* line 173, sass/wordpress/_style.scss */
-.entry-meta {
-  font-size: 0.8125em;
-  margin-top: 0.5em;
-}
+.entry-meta { font-size: 0.8125em; margin-top: 0.5em; }
 
-/* line 179, sass/wordpress/_style.scss */
-.entry-content,
-.entry-summary {
-  margin: 1.875em 0 0;
-}
+.entry-content, .entry-summary { margin: 1.875em 0 0; }
 
-/* line 182, sass/wordpress/_style.scss */
-.page-links {
-  clear: both;
-  margin: 0 0 1.875em;
-}
+.page-links { clear: both; margin: 0 0 1.875em; }
 
 /* =Archive
 ----------------------------------------------- */
-/* line 190, sass/wordpress/_style.scss */
-.author-info {
-  *zoom: 1;
-}
-/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.author-info:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.author-info { *zoom: 1; }
+.author-info:after { content: ""; display: table; clear: both; }
 
-/* line 193, sass/wordpress/_style.scss */
-.author-avatar {
-  width: 60px;
-  float: left;
-  margin-right: 10px;
-}
+.author-avatar { width: 60px; float: left; margin-right: 10px; }
 
-/* line 198, sass/wordpress/_style.scss */
-.author-description {
-  overflow: hidden;
-}
+.author-description { overflow: hidden; }
 
-/* line 201, sass/wordpress/_style.scss */
-.author-description .vcard {
-  margin-top: 0;
-  margin-bottom: 0.25em;
-  display: block;
-}
-/* line 205, sass/wordpress/_style.scss */
-.author-description .vcard .fn {
-  font-weight: bold;
-}
+.author-description .vcard { margin-top: 0; margin-bottom: 0.25em; display: block; }
+.author-description .vcard .fn { font-weight: bold; }
 
-/* line 209, sass/wordpress/_style.scss */
-.author-url {
-  margin-bottom: 0.5em;
-}
+.author-url { margin-bottom: 0.5em; }
 
-/* line 212, sass/wordpress/_style.scss */
-.user_description {
-  line-height: 1.6;
-}
+.user_description { line-height: 1.6; }
 
 /* =Asides
 ----------------------------------------------- */
-/* line 220, sass/wordpress/_style.scss */
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none;
-}
+.blog .format-aside .entry-title, .archive .format-aside .entry-title { display: none; }
 
 /* =Media
 ----------------------------------------------- */
-/* line 229, sass/wordpress/_style.scss */
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
+.entry-content img.wp-smiley, .comment-content img.wp-smiley { border: none; margin-bottom: 0; margin-top: 0; padding: 0; }
 
-/* line 235, sass/wordpress/_style.scss */
-.wp-caption {
-  margin-bottom: 1em;
-  max-width: 100%;
-}
+.wp-caption { margin-bottom: 1em; max-width: 100%; }
 
-/* line 240, sass/wordpress/_style.scss */
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 5px auto;
-  max-width: 98%;
-}
+.wp-caption img[class*="wp-image-"] { display: block; margin: 5px auto; max-width: 98%; }
 
-/* line 245, sass/wordpress/_style.scss */
-.wp-caption-text {
-  font-size: 0.875em;
-  margin: 5px 5px 0 5px;
-  color: #6f6f6f;
-}
+.wp-caption-text { font-size: 0.875em; margin: 5px 5px 0 5px; color: #6f6f6f; }
 
-/* line 251, sass/wordpress/_style.scss */
-.site-content .gallery {
-  margin-bottom: 1.5em;
-}
+.site-content .gallery { margin-bottom: 1.5em; }
 
-/* line 255, sass/wordpress/_style.scss */
-.gallery-item {
-  text-align: center;
-}
+.gallery-item { text-align: center; }
 
-/* line 258, sass/wordpress/_style.scss */
-.gallery-item a img {
-  max-width: 90%;
-  height: auto;
-}
+.gallery-item a img { max-width: 90%; height: auto; }
 
-/* line 262, sass/wordpress/_style.scss */
-.gallery-box li {
-  margin-right: 0;
-}
+.gallery-box li { margin-right: 0; }
 
-/* line 265, sass/wordpress/_style.scss */
-.entry-caption {
-  margin-top: 1em;
-}
+.entry-caption { margin-top: 1em; }
 
-/* line 268, sass/wordpress/_style.scss */
-.gallery [class*="block-grid-"] > li {
-  display: inline-block;
-}
+.gallery [class*="block-grid-"] > li { display: inline-block; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-1 > li:nth-of-type(1n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-1 > li:nth-of-type(1n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-2 > li:nth-of-type(2n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-2 > li:nth-of-type(2n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-3 > li:nth-of-type(3n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-3 > li:nth-of-type(3n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-4 > li:nth-of-type(4n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-4 > li:nth-of-type(4n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-5 > li:nth-of-type(5n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-5 > li:nth-of-type(5n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-6 > li:nth-of-type(6n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-6 > li:nth-of-type(6n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-7 > li:nth-of-type(7n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-7 > li:nth-of-type(7n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-8 > li:nth-of-type(8n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-8 > li:nth-of-type(8n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-9 > li:nth-of-type(9n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-9 > li:nth-of-type(9n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-10 > li:nth-of-type(10n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-10 > li:nth-of-type(10n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-11 > li:nth-of-type(11n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-11 > li:nth-of-type(11n+1) { clear: both; }
 
-/* line 272, sass/wordpress/_style.scss */
-.gallery .small-block-grid-12 > li:nth-of-type(12n+1) {
-  clear: both;
-}
+.gallery .small-block-grid-12 > li:nth-of-type(12n+1) { clear: both; }
 
 /* =Navigation
 ----------------------------------------------- */
-/* line 278, sass/wordpress/_style.scss */
-.site-content [class*="navigation"] {
-  margin: 0 0 1.875em;
-}
+.site-content [class*="navigation"] { margin: 0 0 1.875em; }
 
-/* line 281, sass/wordpress/_style.scss */
-[class*="navigation"] .nav-previous {
-  float: left;
-  width: 50%;
-}
+[class*="navigation"] .nav-previous { float: left; width: 50%; }
 
-/* line 285, sass/wordpress/_style.scss */
-[class*="navigation"] .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
+[class*="navigation"] .nav-next { float: right; text-align: right; width: 50%; }
 
 /* =Comments
 ----------------------------------------------- */
-/* line 294, sass/wordpress/_style.scss */
-.comments-area {
-  margin-top: 3.75em;
-}
+.comments-area { margin-top: 3.75em; }
 
-/* line 298, sass/wordpress/_style.scss */
-.comments-title {
-  font-size: 1.25em;
-}
+.comments-title { font-size: 1.25em; }
 
-/* line 302, sass/wordpress/_style.scss */
-.comment-list {
-  font-size: 0.875em;
-  list-style-type: none;
-  margin-left: 0 !important;
-}
-/* line 306, sass/wordpress/_style.scss */
-.comment-list .children {
-  list-style-type: none;
-  margin: 0;
-  margin-left: 45px;
-}
-/* line 312, sass/wordpress/_style.scss */
-.comment-list .depth-1 {
-  padding: 1em 0;
-  border-bottom: dashed 1px #dddddd;
-}
+.comment-list { font-size: 0.875em; list-style-type: none; margin-left: 0 !important; }
+.comment-list .children { list-style-type: none; margin: 0; margin-left: 45px; }
+.comment-list .depth-1 { padding: 1em 0; border-bottom: dashed 1px #dddddd; }
 
-/* line 317, sass/wordpress/_style.scss */
-.comment-body .vcard {
-  display: block;
-}
+.comment-body .vcard { display: block; }
 
-/* line 321, sass/wordpress/_style.scss */
-.comment-meta {
-  *zoom: 1;
-}
-/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.comment-meta:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 323, sass/wordpress/_style.scss */
-.comment-meta .comment-avatar {
-  width: 40px;
-  float: left;
-  margin-right: 5px;
-}
-/* line 328, sass/wordpress/_style.scss */
-.comment-meta .comment-metadata {
-  padding-left: 5px;
-  overflow: hidden;
-  line-height: 1.4;
-}
+.comment-meta { *zoom: 1; }
+.comment-meta:after { content: ""; display: table; clear: both; }
+.comment-meta .comment-avatar { width: 40px; float: left; margin-right: 5px; }
+.comment-meta .comment-metadata { padding-left: 5px; overflow: hidden; line-height: 1.4; }
 
-/* line 334, sass/wordpress/_style.scss */
-.comment-author .fn {
-  font-style: normal;
-}
+.comment-author .fn { font-style: normal; }
 
-/* line 338, sass/wordpress/_style.scss */
-.comment-content {
-  clear: both;
-  margin-top: 0.5em;
-}
-/* line 341, sass/wordpress/_style.scss */
-.comment-content p {
-  margin-bottom: 1em;
-}
+.comment-content { clear: both; margin-top: 0.5em; }
+.comment-content p { margin-bottom: 1em; }
 
 /* =Comments form
 ----------------------------------------------- */
-/* line 351, sass/wordpress/_style.scss */
-#reply-title {
-  font-size: 1.25em;
-}
+#reply-title { font-size: 1.25em; }
 
-/* line 354, sass/wordpress/_style.scss */
-.required {
-  color: red;
-  font-weight: bold;
-}
+.required { color: red; font-weight: bold; }
 
-/* line 359, sass/wordpress/_style.scss */
-.comment-notes,
-.logged-in-as {
-  font-size: 0.875em;
-}
+.comment-notes, .logged-in-as { font-size: 0.875em; }
 
-/* line 363, sass/wordpress/_style.scss */
-textarea {
-  min-height: 10em;
-}
+textarea { min-height: 10em; }
 
 /* =Widgets
 ----------------------------------------------- */
-/* line 370, sass/wordpress/_style.scss */
-.widget {
-  margin: 0 0 1.5em;
-}
+.widget { margin: 0 0 1.5em; }
 
 /* Make sure select elements fit in widgets */
-/* line 375, sass/wordpress/_style.scss */
-.widget select {
-  max-width: 100%;
-}
+.widget select { max-width: 100%; }
 
-/* line 379, sass/wordpress/_style.scss */
-.widget-title,
-.widgettitle {
-  font-size: 1.4em;
-}
+.widget-title, .widgettitle { font-size: 1.4em; }
 
 /* Search widget */
-/* line 383, sass/wordpress/_style.scss */
-.widget_search .submit {
-  display: none;
-}
+.widget_search .submit { display: none; }
 
-/* line 386, sass/wordpress/_style.scss */
-.search-form label {
-  font-size: 1em;
-  margin: 0;
-}
+.search-form label { font-size: 1em; margin: 0; }
 
 /* =Infinite Scroll
 ----------------------------------------------- */
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 397, sass/wordpress/_style.scss */
-.infinite-scroll .navigation-paging,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
+.infinite-scroll .navigation-paging, .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */ display: none; }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-/* line 402, sass/wordpress/_style.scss */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
+.infinity-end.neverending .site-footer { display: block; }
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
-@media only screen and (min-width: 768px) {
-  /* Menu */
-  /* line 5, sass/wordpress/_media_queries.scss */
-  .top-bar .name {
-    border-left: solid 1px #2b2b2b;
-  }
-}
+@media only screen and (min-width: 768px) { /* Menu */
+  .top-bar .name { border-left: solid 1px #2b2b2b; } }
