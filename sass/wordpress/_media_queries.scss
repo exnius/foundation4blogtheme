@@ -1,8 +1,7 @@
-/* for pc */
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 @media only screen and (min-width: 768px) {
 
-	/* =Menu
-	----------------------------------------------- */
+	/* Menu */
 	.top-bar .name  {
 		border-left: $topbar-divider-border-bottom;
 	}

@@ -29,14 +29,11 @@ https://gist.github.com/zurbchris/5068210
 @import "compass";
 
 // Global Foundation Settings
-@import "settings";
+@import "foundation/variables";
 
 // WordPress class
-@import "wordpress_mixin";
-@import "wordpress";
+@import "wordpress/variables";
+@import "wordpress/style";
 
-// Contact Form 7 class
-//@import "wordpress_contactform7";
-
-// for pc
-@import "wordpress_forpc";
+// Media Queries
+@import "wordpress/media_queries";

@@ -86,11 +86,11 @@ function foundation4blogtheme_scripts() {
 	if ( ! is_admin() ) {
 		global $wp_styles;
 
-		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array( 'foundation4-app' ), '20130514' );
+		wp_enqueue_style( 'foundation4blogtheme-style', get_stylesheet_uri(), array( 'foundation4' ), '20130514' );
 
 		// Foundation4
-		wp_enqueue_style( 'foundation4-app', get_template_directory_uri() . '/app.css', array(), '4.2.3' );
-		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.min.css', array( 'foundation4-app' ), 'Foundation4' );
+		wp_enqueue_style( 'foundation4', get_template_directory_uri() . '/foundation.css', array(), '4.2.3' );
+		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.min.css', array( 'foundation4' ), 'Foundation4' );
 		$wp_styles->add_data( 'ie8-grid-foundation-4', 'conditional', 'lt IE 9' );
 
 		// Modernizr acts as a shim for HTML5 elements for older browsers as well as detection for mobile devices.
@@ -111,6 +111,8 @@ function foundation4blogtheme_scripts() {
 		// wp_enqueue_script( 'foundation.dropdown', get_template_directory_uri() . '/js/foundation/foundation.dropdown.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 forms
 		// wp_enqueue_script( 'foundation.forms', get_template_directory_uri() . '/js/foundation/foundation.forms.js', array( 'foundation' ), '4.2.3', true );
+		// foundation4 Interchange
+		// wp_enqueue_script( 'foundation.interchange', get_template_directory_uri() . '/js/foundation/foundation.interchange.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 joyride
 		// wp_enqueue_script( 'foundation.joyride', get_template_directory_uri() . '/js/foundation/foundation.joyride.js', array( 'foundation' ), '4.2.3', true );
 		// foundation4 magellan

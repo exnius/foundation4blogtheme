@@ -215,6 +215,6 @@ textarea { min-height: 10em; }
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer { display: block; }
 
-/* for pc */
-@media only screen and (min-width: 768px) { /* =Menu ----------------------------------------------- */
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media only screen and (min-width: 768px) { /* Menu */
   .top-bar .name { border-left: solid 1px #2b2b2b; } }
