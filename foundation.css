@@ -504,7 +504,7 @@ code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight
 /* Lists */
 ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: outside; font-family: inherit; }
 
-ul, ol { margin-left: 0; }
+ul, ol { margin-left: 1.25em; }
 
 /* Unordered Lists */
 ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; /* Override nested font-size change */ }
@@ -1212,19 +1212,19 @@ ul.pagination li { float: left; display: block; }
 .pagination-centered ul.pagination li { float: none; display: inline-block; }
 
 /* Panels */
-.panel { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; }
-.panel > :first-child { margin-top: 0; }
-.panel > :last-child { margin-bottom: 0; }
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p { color: #333333; }
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 { line-height: 1; margin-bottom: 0.625em; }
-.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader { line-height: 1.4; }
-.panel.callout { border-style: solid; border-width: 1px; border-color: #2284a1; margin-bottom: 1.25em; padding: 1.25em; background: #2ba6cb; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
-.panel.callout > :first-child { margin-top: 0; }
-.panel.callout > :last-child { margin-bottom: 0; }
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p { color: white; }
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 { line-height: 1; margin-bottom: 0.625em; }
-.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader { line-height: 1.4; }
-.panel.radius { -webkit-border-radius: 3px; border-radius: 3px; }
+.panel, .sticky { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; }
+.panel > :first-child, .sticky > :first-child { margin-top: 0; }
+.panel > :last-child, .sticky > :last-child { margin-bottom: 0; }
+.panel h1, .sticky h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6, .panel p, .sticky p { color: #333333; }
+.panel h1, .sticky h1, .panel h2, .sticky h2, .panel h3, .sticky h3, .panel h4, .sticky h4, .panel h5, .sticky h5, .panel h6, .sticky h6 { line-height: 1; margin-bottom: 0.625em; }
+.panel h1.subheader, .sticky h1.subheader, .panel h2.subheader, .sticky h2.subheader, .panel h3.subheader, .sticky h3.subheader, .panel h4.subheader, .sticky h4.subheader, .panel h5.subheader, .sticky h5.subheader, .panel h6.subheader, .sticky h6.subheader { line-height: 1.4; }
+.panel.callout, .callout.sticky { border-style: solid; border-width: 1px; border-color: #2284a1; margin-bottom: 1.25em; padding: 1.25em; background: #2ba6cb; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+.panel.callout > :first-child, .callout.sticky > :first-child { margin-top: 0; }
+.panel.callout > :last-child, .callout.sticky > :last-child { margin-bottom: 0; }
+.panel.callout h1, .callout.sticky h1, .panel.callout h2, .callout.sticky h2, .panel.callout h3, .callout.sticky h3, .panel.callout h4, .callout.sticky h4, .panel.callout h5, .callout.sticky h5, .panel.callout h6, .callout.sticky h6, .panel.callout p, .callout.sticky p { color: white; }
+.panel.callout h1, .callout.sticky h1, .panel.callout h2, .callout.sticky h2, .panel.callout h3, .callout.sticky h3, .panel.callout h4, .callout.sticky h4, .panel.callout h5, .callout.sticky h5, .panel.callout h6, .callout.sticky h6 { line-height: 1; margin-bottom: 0.625em; }
+.panel.callout h1.subheader, .callout.sticky h1.subheader, .panel.callout h2.subheader, .callout.sticky h2.subheader, .panel.callout h3.subheader, .callout.sticky h3.subheader, .panel.callout h4.subheader, .callout.sticky h4.subheader, .panel.callout h5.subheader, .callout.sticky h5.subheader, .panel.callout h6.subheader, .callout.sticky h6.subheader { line-height: 1.4; }
+.panel.radius, .radius.sticky { -webkit-border-radius: 3px; border-radius: 3px; }
 
 /* Pricing Tables */
 .pricing-table { border: solid 1px #dddddd; margin-left: 0; margin-bottom: 1.25em; }

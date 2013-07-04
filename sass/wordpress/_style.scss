@@ -19,7 +19,7 @@ body {
 	}
 }
 .sep {
-	color: $border-color;
+	color: $hr-border-color;
 }
 
 /* Alignment */
@@ -140,15 +140,14 @@ body {
 /* =Content
 ----------------------------------------------- */
 
-.sticky {
-	@include roundbox;
-}
-
 .hentry {
 	margin-bottom: $margin;
 	padding-bottom: $margin;
-	border-bottom: double 4px $border-color;
+	&:not(.sticky) {
+		border-bottom: double 4px $hr-border-color;
+	}
 }
+
 .byline {
 	display: none;
 }
@@ -159,13 +158,13 @@ body {
 .page-header {
 	margin-bottom: $margin;
 	padding-bottom: $margin*0.5;
-	border-bottom: double 4px $border-color;
+	border-bottom: double 4px $hr-border-color;
 }
 
 .entry-header {
 	margin-bottom: $margin;
 	padding-bottom: $margin*0.5;
-	border-bottom: $border-style $border-width $border-color;
+	border-bottom: $hr-border-style $hr-border-width $hr-border-color;
 }
 .entry-title {
 	margin-top: 0;
@@ -184,11 +183,6 @@ body {
 	margin: 0 0 $margin;
 }
 
-.entry-footer {
-	clear: both;
-	@include roundbox;
-	background-color: #eeeeee;
-}
 
 /* =Archive
 ----------------------------------------------- */
@@ -312,7 +306,7 @@ body {
 
 	.depth-1 {
 		padding: 1em 0;
-		border-bottom: dashed $border-width $border-color;
+		border-bottom: dashed $hr-border-width $hr-border-color;
 	}
 }
 .comment-body .vcard {

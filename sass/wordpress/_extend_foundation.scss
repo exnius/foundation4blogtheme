@@ -1,3 +1,7 @@
+.sticky {
+	@extend .panel;
+}
+
 .comment-reply-link {
 	@extend .button;
 	@extend .secondary;

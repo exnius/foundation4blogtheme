@@ -193,15 +193,15 @@ $paragraph-line-height: 1.6;
 
 // <hr> element
 
-// $hr-border-width: 1px;
-// $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-width: 1px;
+$hr-border-style: solid;
+$hr-border-color: #ddd;
 // $hr-margin: emCalc(20px);
 
 // Lists
 
 // $list-style-position: outside;
-// $list-side-margin: emCalc(20px);
+$list-side-margin: emCalc(20px);
 // $list-nested-margin: emCalc(20px);
 // $definition-list-header-weight: bold;
 // $definition-list-header-margin-bottom: .3em;
