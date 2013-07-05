@@ -241,7 +241,12 @@ body {
 
 /* =Media
 ----------------------------------------------- */
-
+.entry-content img,
+.widget img {
+	max-width: 100%;
+	height: auto;
+	width: auto; /* for ie8 */
+}
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	border: none;
@@ -258,6 +263,8 @@ body {
 	display: block;
 	margin: 5px auto;
 	max-width: 98%;
+	width:auto; /* for ie8 */
+	height: auto;
 }
 .wp-caption-text,
 .gallery-caption {
@@ -276,6 +283,7 @@ body {
 .gallery-item a img {
 	max-width: 90%;
 	height: auto;
+	width: auto; /* for ie8 */
 }
 .gallery-box li {
 	margin-right: 0;

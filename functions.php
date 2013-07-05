@@ -93,7 +93,7 @@ function foundation4blogtheme_scripts() {
 
 		// Genericons
 		$genericons_version = '2.09';
-		wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons.css', array( 'foundation4blogtheme-style' ), $genericons_version );
+		wp_enqueue_style( 'foundation4blogtheme-genericons', get_template_directory_uri() . '/genericons.css', array( 'foundation4blogtheme-style' ), $genericons_version );
 
 		// Foundation4
 		$foundation4_version = '4.2.3';
