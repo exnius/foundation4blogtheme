@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foundation4blogtheme 1.3-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/foundation4blogtheme\n"
-"POT-Creation-Date: 2013-07-04 10:15:22+00:00\n"
+"POT-Creation-Date: 2013-07-05 04:13:14+00:00\n"
 "PO-Revision-Date: 2013-04-08 16:45+0900\n"
 "Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
 "Language-Team: \n"
@@ -91,53 +91,45 @@ msgid "Comment navigation"
 msgstr "コメントナビゲーション"
 
 #: comments.php:37 comments.php:57
-msgid "&larr; Older Comments"
-msgstr "&larr; 以前のコメント"
+msgid "<i class=\"genericon genericon-previous\"></i> Older Comments"
+msgstr "<i class=\"genericon genericon-previous\"></i> 以前のコメント"
 
 #: comments.php:38 comments.php:58
-msgid "Newer Comments &rarr;"
-msgstr "新しいコメント &rarr;"
+msgid "Newer Comments <i class=\"genericon genericon-next\"></i>"
+msgstr "新しいコメント <i class=\"genericon genericon-next\"></i>"
 
 #: comments.php:68
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
-#: content-page.php:12 content-single.php:17 content.php:19 content.php:36
-#: image.php:42 inc/template-tags.php:71 inc/template-tags.php:99
+#: content-page.php:12 content-single.php:17 content.php:19 content.php:35
+#: image.php:44 inc/template-tags.php:71 inc/template-tags.php:99
 msgid "Edit"
 msgstr "編集"
 
-#: content-page.php:19 content-single.php:36 content.php:51 image.php:64
+#: content-page.php:19 content-single.php:36 content.php:51 image.php:66
 msgid "Pages:"
 msgstr "ページ:"
 
-#: content-single.php:15 content.php:17 image.php:40
+#: content-single.php:15 content.php:17 image.php:41
 msgid "Leave a comment"
 msgstr "コメントをどうぞ"
 
-#: content-single.php:15 content.php:17 image.php:40
+#: content-single.php:15 content.php:17 image.php:41
 msgid "1 Comment"
 msgstr "1件のコメント"
 
-#: content-single.php:15 content.php:17 image.php:40
+#: content-single.php:15 content.php:17 image.php:41
 msgid "% Comments"
 msgstr "%件のコメント"
 
-#: content-single.php:21 content.php:23
-msgid "Categories: "
-msgstr "カテゴリー: "
-
-#: content-single.php:23 content.php:25
+#: content-single.php:22 content.php:24
 msgid ", "
 msgstr ", "
 
-#: content-single.php:26 content.php:28
-msgid "Tags: "
-msgstr "タグ: "
-
 #: content.php:48
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "続きを読む <span class=\"meta-nav\">&rarr;</span>"
+msgid "Continue reading <i class=\"genericon genericon-next\"></i>"
+msgstr "続きを読む <i class=\"genericon genericon-next\"></i>"
 
 #: footer.php:23
 msgid "A Semantic Personal Publishing Platform"
@@ -176,24 +168,16 @@ msgid "MENU"
 msgstr ""
 
 #: image.php:18
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> 前へ"
+msgid "<i class=\"genericon genericon-previous\"></i> Previous"
+msgstr "<i class=\"genericon genericon-previous\"></i> 前へ"
 
 #: image.php:19
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr "次へ <span class=\"meta-nav\">&rarr;</span>"
+msgid "Next <i class=\"genericon genericon-next\"></i>"
+msgstr "次へ <i class=\"genericon genericon-next\"></i>"
 
 #: image.php:28
-msgid ""
-"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
-"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
-"rel=\"gallery\">%8$s</a>"
-msgstr ""
-"投稿日時: <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\" pubdate>%2$s</time></span> (<a href=\"%3$s\" title=\"フルサイズ画像"
-"へのリンク\">%4$s &times; %5$s</a>) ギャラリー名: <a href=\"%6$s\" title="
-"\"%7$s へ戻る\" rel=\"gallery\">%8$s</a>"
+msgid "<i class=\"genericon genericon-time\"></i><span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> <i class=\"genericon genericon-image\"></i> <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> <i class=\"genericon genericon-attachment\"></i><a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr "<i class=\"genericon genericon-time\"></i><span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time></span> <i class=\"genericon genericon-image\"></i> <a href=\"%3$s\" title=\"フルサイズ画像へのリンク\">%4$s &times; %5$s</a> <i class=\"genericon genericon-attachment\"></i><a href=\"%6$s\" title=\"%7$s へ戻る\" rel=\"gallery\">%8$s</a>"
 
 #: inc/customizer.php:49
 msgid "Header Scheme"
@@ -246,23 +230,13 @@ msgstr "送信"
 msgid "Post navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:38
-msgctxt "Previous post link"
-msgid "&larr;"
-msgstr "&larr;"
-
-#: inc/template-tags.php:39
-msgctxt "Next post link"
-msgid "&rarr;"
-msgstr "&rarr;"
-
 #: inc/template-tags.php:44
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> 以前の投稿"
+msgid "<i class=\"genericon genericon-previous\"></i> Older posts"
+msgstr "<i class=\"genericon genericon-previous\"></i> 以前の投稿"
 
 #: inc/template-tags.php:48
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
+msgid "Newer posts <i class=\"genericon genericon-next\"></i>"
+msgstr "新しい投稿 <i class=\"genericon genericon-next\"></i>"
 
 #: inc/template-tags.php:71
 msgid "Pingback:"
@@ -285,17 +259,11 @@ msgstr "%1$s %2$s"
 msgid "Your comment is awaiting moderation."
 msgstr "コメントは現在承認待ちです。"
 
-#: inc/template-tags.php:190
-msgid ""
-"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a><span "
-"class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href="
-"\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
-msgstr ""
-"投稿日時: <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a><span "
-"class=\"byline\"> 投稿者: <span class=\"author vcard\"><a class=\"url fn n\" "
-"href=\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
+#: inc/template-tags.php:191
+msgid "<i class=\"genericon genericon-time\"></i><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a><span class=\"byline\"> <i class=\"genericon genericon-user\"></i><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
+msgstr "<i class=\"genericon genericon-time\"></i><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a><span class=\"byline\"> <i class=\"genericon genericon-user\"></i><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
 
-#: inc/template-tags.php:195
+#: inc/template-tags.php:196
 msgid "View all posts by %s"
 msgstr "%s の投稿をすべて表示"
 

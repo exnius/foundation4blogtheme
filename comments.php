@@ -34,8 +34,8 @@ if ( post_password_required() )
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="navigation-comment" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foundation4blogtheme' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foundation4blogtheme' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foundation4blogtheme' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( '<i class="genericon genericon-previous"></i> Older Comments', 'foundation4blogtheme' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <i class="genericon genericon-next"></i>', 'foundation4blogtheme' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -54,8 +54,8 @@ if ( post_password_required() )
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation-comment" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'foundation4blogtheme' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'foundation4blogtheme' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'foundation4blogtheme' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( '<i class="genericon genericon-previous"></i> Older Comments', 'foundation4blogtheme' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <i class="genericon genericon-next"></i>', 'foundation4blogtheme' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 

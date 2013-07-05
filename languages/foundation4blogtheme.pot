@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foundation4blogtheme 20130703\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/foundation4blogtheme\n"
-"POT-Creation-Date: 2013-07-04 10:15:22+00:00\n"
+"POT-Creation-Date: 2013-07-05 04:13:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -83,52 +83,44 @@ msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:37 comments.php:57
-msgid "&larr; Older Comments"
+msgid "<i class=\"genericon genericon-previous\"></i> Older Comments"
 msgstr ""
 
 #: comments.php:38 comments.php:58
-msgid "Newer Comments &rarr;"
+msgid "Newer Comments <i class=\"genericon genericon-next\"></i>"
 msgstr ""
 
 #: comments.php:68
 msgid "Comments are closed."
 msgstr ""
 
-#: content-page.php:12 content-single.php:17 content.php:19 content.php:36
-#: image.php:42 inc/template-tags.php:71 inc/template-tags.php:99
+#: content-page.php:12 content-single.php:17 content.php:19 content.php:35
+#: image.php:44 inc/template-tags.php:71 inc/template-tags.php:99
 msgid "Edit"
 msgstr ""
 
-#: content-page.php:19 content-single.php:36 content.php:51 image.php:64
+#: content-page.php:19 content-single.php:36 content.php:51 image.php:66
 msgid "Pages:"
 msgstr ""
 
-#: content-single.php:15 content.php:17 image.php:40
+#: content-single.php:15 content.php:17 image.php:41
 msgid "Leave a comment"
 msgstr ""
 
-#: content-single.php:15 content.php:17 image.php:40
+#: content-single.php:15 content.php:17 image.php:41
 msgid "1 Comment"
 msgstr ""
 
-#: content-single.php:15 content.php:17 image.php:40
+#: content-single.php:15 content.php:17 image.php:41
 msgid "% Comments"
 msgstr ""
 
-#: content-single.php:21 content.php:23
-msgid "Categories: "
-msgstr ""
-
-#: content-single.php:23 content.php:25
+#: content-single.php:22 content.php:24
 msgid ", "
 msgstr ""
 
-#: content-single.php:26 content.php:28
-msgid "Tags: "
-msgstr ""
-
 #: content.php:48
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgid "Continue reading <i class=\"genericon genericon-next\"></i>"
 msgstr ""
 
 #: footer.php:23
@@ -168,19 +160,20 @@ msgid "MENU"
 msgstr ""
 
 #: image.php:18
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgid "<i class=\"genericon genericon-previous\"></i> Previous"
 msgstr ""
 
 #: image.php:19
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgid "Next <i class=\"genericon genericon-next\"></i>"
 msgstr ""
 
 #: image.php:28
 msgid ""
-"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
-"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
-"rel=\"gallery\">%8$s</a>"
+"<i class=\"genericon genericon-time\"></i><span class=\"entry-date\"><time "
+"class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> <i class="
+"\"genericon genericon-image\"></i> <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> <i class=\"genericon genericon-attachment"
+"\"></i><a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
 msgstr ""
 
 #: inc/customizer.php:49
@@ -232,22 +225,12 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:38
-msgctxt "Previous post link"
-msgid "&larr;"
-msgstr ""
-
-#: inc/template-tags.php:39
-msgctxt "Next post link"
-msgid "&rarr;"
-msgstr ""
-
 #: inc/template-tags.php:44
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgid "<i class=\"genericon genericon-previous\"></i> Older posts"
 msgstr ""
 
 #: inc/template-tags.php:48
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgid "Newer posts <i class=\"genericon genericon-next\"></i>"
 msgstr ""
 
 #: inc/template-tags.php:71
@@ -271,14 +254,15 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:190
+#: inc/template-tags.php:191
 msgid ""
-"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a><span "
-"class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href="
+"<i class=\"genericon genericon-time\"></i><a href=\"%1$s\" title=\"%2$s\" "
+"rel=\"bookmark\">%3$s</a><span class=\"byline\"> <i class=\"genericon "
+"genericon-user\"></i><span class=\"author vcard\"><a class=\"url fn n\" href="
 "\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
 msgstr ""
 
-#: inc/template-tags.php:195
+#: inc/template-tags.php:196
 msgid "View all posts by %s"
 msgstr ""
 

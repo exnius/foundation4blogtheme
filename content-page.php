@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<?php edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<div class="entry-meta"><span class="edit-link">', '</span></div>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<div class="entry-meta"><span class="edit-link"><i class="genericon genericon-edit"></i>', '</span></div>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
