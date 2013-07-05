@@ -295,7 +295,8 @@ body {
 	display: inline-block;
 }
 @for $i from 1 through 12 {
-.gallery .small-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: both; }
+	.gallery .small-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: both; }
+	.gallery .clearing-blackout .small-block-grid-#{($i)} > li:nth-of-type(#{$i}n+1) { clear: none; }
 }
 
 /* =Navigation

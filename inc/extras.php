@@ -258,14 +258,14 @@ function foudation4blogtheme_gallery_shortcode($output, $attr) {
 		$caption = trim($attachment->post_excerpt) ? wptexturize($attachment->post_excerpt) : '';
 		$default_attr = array(
 			'data-caption' => $caption,
-			'class'	=> "th radius attachment-$size",
+			'class'	=> "attachment-$size",
 		);
 		$attachmentimg = wp_get_attachment_image($id, $size, false, $default_attr);
 
 		$link = wp_get_attachment_image_src($id, 'full', false) ;
 
 		$output .= "<{$itemtag} class='gallery-item'>";
-		$output .= "<a href='{$link[0]}'>{$attachmentimg}</a>";
+		$output .= "<a href='{$link[0]}' class='th radius'>{$attachmentimg}</a>";
 		if ( $captiontag && trim($attachment->post_excerpt) ) {
 			$output .= "
 				<{$captiontag} class='wp-caption-text gallery-caption'>
