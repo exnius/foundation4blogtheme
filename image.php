@@ -15,8 +15,8 @@ get_header();
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<nav role="navigation" id="image-navigation" class="navigation-image">
-					<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'foundation4blogtheme' ) ); ?></div>
-					<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'foundation4blogtheme' ) ); ?></div>
+					<div class="nav-previous"><?php previous_image_link( false, __( '<i class="genericon genericon-previous"></i> Previous', 'foundation4blogtheme' ) ); ?></div>
+					<div class="nav-next"><?php next_image_link( false, __( 'Next <i class="genericon genericon-next"></i>', 'foundation4blogtheme' ) ); ?></div>
 				</nav><!-- #image-navigation -->
 
 				<header class="entry-header">
@@ -25,7 +25,7 @@ get_header();
 					<div class="entry-meta">
 						<?php
 							$metadata = wp_get_attachment_metadata();
-							printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'foundation4blogtheme' ),
+							printf( __( '<i class="genericon genericon-time"></i><span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> <i class="genericon genericon-image"></i> <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> <i class="genericon genericon-attachment"></i><a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'foundation4blogtheme' ),
 								esc_attr( get_the_date( 'c' ) ),
 								esc_html( get_the_date() ),
 								wp_get_attachment_url(),
@@ -36,10 +36,12 @@ get_header();
 								get_the_title( $post->post_parent )
 							);
 
-							if ( comments_open() )
-								comments_popup_link( '<span class="sep"> | </span><span class="leave-reply">' . __( 'Leave a comment', 'foundation4blogtheme' ) . '</span>', __( '1 Comment', 'foundation4blogtheme' ), __( '% Comments', 'foundation4blogtheme' ) );
+							if ( comments_open() ) {
+								echo ' <i class="genericon genericon-comment"></i> ';
+								comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'foundation4blogtheme' ) . '</span>', __( '1 Comment', 'foundation4blogtheme' ), __( '% Comments', 'foundation4blogtheme' ) );
+							}
 
-							edit_post_link( __( 'Edit', 'foundation4blogtheme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' );
+							edit_post_link( __( 'Edit', 'foundation4blogtheme' ), ' <span class="edit-link"><i class="genericon genericon-edit"></i>', '</span>' );
 						?>
 					</div><!-- .entry-meta -->
 

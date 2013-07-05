@@ -157,13 +157,15 @@ body {
 	}
 }
 
-.byline {
+.byline,
+.updated {
 	display: none;
 }
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
+
 .page-header {
 	margin-bottom: $margin;
 	padding-bottom: $margin*0.5;
@@ -180,8 +182,13 @@ body {
 	margin-bottom: 0;
 }
 .entry-meta {
-	font-size: emCalc(13px);
+	font-size: emCalc(14px);
+	color: lighten( $body-font-color, 30% );
 	margin-top: 0.5em;
+
+	.genericon {
+		font-size: 1em;
+	}
 }
 
 .entry-content,
@@ -219,6 +226,7 @@ body {
 	margin-bottom: 0.5em;
 }
 .user_description {
+	font-size: emCalc(14px);
 	line-height: $paragraph-line-height;
 }
 

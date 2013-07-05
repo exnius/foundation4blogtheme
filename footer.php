@@ -20,7 +20,7 @@
 		?>
 		</div>
 		<div class="theme-info columns small-12 large-8">
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'foundation4blogtheme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'foundation4blogtheme' ), 'WordPress' ); ?></a>
+			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'foundation4blogtheme' ); ?>" rel="generator"><i class="genericon genericon-wordpress"></i> <?php printf( __( 'Proudly powered by %s', 'foundation4blogtheme' ), 'WordPress' ); ?></a>
 			<br class="show-for-small"><span class="sep footer-hide-for-small"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'foundation4blogtheme' ), 'foundation4blogtheme', '<a href="http://gatespace.jp/" rel="designer">gatespace</a>' ); ?>
 			<br class="show-for-small"><span class="sep footer-hide-for-small"> | </span>
