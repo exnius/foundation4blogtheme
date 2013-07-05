@@ -10,6 +10,17 @@
 		border-left: $topbar-divider-border-bottom;
 	}
 
+	.entry-header {
+		.entry-post_thumbnail {
+			width: 175px;
+			img {
+				width: 150px;
+				height: auto;
+			}
+		}
+	}
+	
+
 	/* colophon */
 	.site-info {
 		text-align: left;

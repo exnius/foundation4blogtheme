@@ -176,7 +176,22 @@ body {
 	margin-bottom: $margin;
 	padding-bottom: $margin*0.5;
 	border-bottom: $hr-border-style $hr-border-width $hr-border-color;
+
+	.entry-post_thumbnail {
+		width: 70px;
+		display: table-cell;
+		vertical-align: top;
+		img {
+			width: 60px;
+			height: auto;
+		}
+	}
+	.entry-header-text {
+		display: table-cell;
+		vertical-align: top;
+	}
 }
+
 .entry-title {
 	margin-top: 0;
 	margin-bottom: 0;
