@@ -41,5 +41,5 @@ doc/
 
 ### make mo ###
 
-LINGUAS
-Makefile
+languages/LINGUAS
+languages/Makefile
