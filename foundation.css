@@ -1354,4 +1354,6 @@ a.th { display: inline-block; }
 .f-dropdown.medium { max-width: 500px; }
 .f-dropdown.large { max-width: 800px; }
 
+.more-link .genericon { font-size: 0.8125em; }
+
 /* Contact Form 7*/

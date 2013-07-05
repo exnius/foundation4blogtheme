@@ -4,6 +4,9 @@
 .more-link {
 	@extend .button;
 	@extend .small;
+	.genericon {
+		font-size: emCalc(13px);
+	}
 }
 
 .comment-reply-link {
