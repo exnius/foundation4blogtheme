@@ -96,7 +96,7 @@ function foundation4blogtheme_scripts() {
 		wp_enqueue_style( 'foundation4blogtheme-genericons', get_template_directory_uri() . '/genericons.css', array( 'foundation4blogtheme-style' ), $genericons_version );
 
 		// Foundation4
-		$foundation4_version = '4.2.3';
+		$foundation4_version = '4.3.1';
 
 		wp_enqueue_style( 'foundation4', get_template_directory_uri() . '/foundation.css', array(), $foundation4_version );
 		wp_enqueue_style( 'ie8-grid-foundation-4', get_template_directory_uri() . '/ie8-grid-foundation-4.min.css', array( 'foundation4' ), $foundation4_version );
@@ -104,9 +104,6 @@ function foundation4blogtheme_scripts() {
 
 		// Modernizr acts as a shim for HTML5 elements for older browsers as well as detection for mobile devices.
 		wp_enqueue_script( 'custom.modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), $foundation4_version );
-
-		// all scripts
-		// wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), $foundation4_version, true );
 
 		// or individually
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation/foundation.js', array('jquery'), $foundation4_version, true );
